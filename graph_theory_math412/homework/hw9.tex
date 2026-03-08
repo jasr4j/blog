@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage, amsmath, amssymb, amsthm, amscd, setspace, bm, graphicx, indentfirst, multirow, tikz, enumerate}
+\usepackage{adjustbox,amsfonts,array,graphicx,booktabs,tabularx,multirow,multicol,stmaryrd, tabu}
+\usepackage[utf8]{inputenc}
+\usetikzlibrary{arrows.meta}
+\title{Math 412, Fall 2023 -- Homework 9}
+\date{}
+\setlength{\parskip}{0.5cm}
+\setlength{\parindent}{0cm}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\ba}{\overline}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\End}{\text{End}}
+\newcommand{\wt}[1]{\text{wt}({#1})}
+\begin{document} \maketitle
+\vspace{-80pt}
+
+\textbf{Due:} Wednesday, November 29th, at 9:00AM via Gradescope
+
+\textbf{Instructions:} Students taking the course for three credit hours (undergraduates, most graduate
+students) should choose four of the following five problems to solve and turn in--if you do all five, only the first four will be graded. Graduate students
+taking the course for four credits should solve all five. Problems that use the word ``describe”,
+``determine”, ``show", or ``prove" require proof for all claims.
+
+\begin{enumerate}
+
+\item[1.] For a chess piece $Q$, {\em the $Q$-graph} is the graph whose vertices are the squares of the chess board
+and the two squares are adjacent if $Q$ can move from one of them to the other in one move. Find the chromatic
+number of the $Q$-graph when $Q$ is  (a) the king, (b) a rook, (c) a bishop, (d) a knight.
+
+
+\item[2.] Prove or disprove: for every $n$-vertex graph $G$,  $\chi(G)\leq \omega(G)+\frac{n}{\alpha(G)}$.
+
+
+\item[3.] Let $G$ be a simple graph. Prove that the chromatic polynomial $p(k) := \chi(G;k)$ of $G$ satisfies $p'(0)\ne 0$ if and only if $G$ is connected. (\emph{Hint: Use Theorem 5.3.8 and its proof. Note that that result doesn't guarantee that coefficients are nonzero}).
+
+\item[4.] Let $G$ be a plane graph, and let $G^*$ be its dual graph. Prove the following:
+\begin{enumerate}
+    \item[(a)] $G^*$ is connected.
+    
+    \item[(b)] If $G$ is connected, then each face of $G^*$ contains exactly one vertex of $G$. (\emph{Hint: Use Euler's Formula})
+    
+    \item[(c)] $(G^*)^*\cong G$ if and only if $G$ is connected.
+\end{enumerate}
+
+
+\item[5.] Let $P$ be a polyhedron such that
+\begin{itemize}
+    \item The faces of $P$ are all either pentagons or hexagons.
+    \item Each vertex of $P$ has degree 3, and lies on the boundary of one pentagon and two hexagons.
+\end{itemize}
+
+Determine how many vertices, edges, and faces $P$ has, and how many of these faces are pentagonal vs. hexagonal.
+
+
+
+
+
+\end{enumerate}
+
+
+
+
+\end{document}

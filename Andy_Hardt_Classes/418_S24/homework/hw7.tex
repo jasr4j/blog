@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage, amsmath, amssymb, amsthm, amscd, setspace, bm, graphicx, indentfirst, multirow, tikz, enumerate, verbatim, appendix}
+
+\usepackage{adjustbox,amsfonts,array,graphicx,booktabs,tabularx,multirow,multicol,stmaryrd, tabu}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{hyperref}
+\usetikzlibrary{arrows.meta}
+\title{Math 418, Spring 2024 -- Homework 7}
+\date{}
+\setlength{\parskip}{0.5cm}
+\setlength{\parindent}{0cm}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\real}{\textrm{Re }}
+\newcommand{\imag}{\textrm{Im }}
+\newcommand{\deriv}[2]{\frac{d #1}{d #2}}
+\newcommand{\sig}[1]{\sum_{#1 =1}^\infty}
+\newcommand{\un}[1]{\bigcup_{#1 =1}^\infty}
+\newcommand{\inter}[1]{\bigcap_{#1 =1}^\infty}
+\newcommand{\cyc}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
+\newcommand{\px}[2]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}}
+\newcommand{\wh}[1]{\widehat{#1}}
+\newcommand{\del}{\partial}
+\newcommand{\st}{ \; \big | \:}
+\newcommand{\ba}{\overline}
+\newcommand{\Int}{\mathrm{Int}}
+\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\rel}{\mathrm{rel}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\End}{\text{End}}
+\newcommand{\Mat}{\text{Mat}}
+\newcommand{\Aut}{\text{Aut}}
+\newcommand{\Mor}{\text{Mor}}
+\newcommand{\Ind}{\text{Ind}}
+\newcommand{\Irr}{\text{Irr}}
+\newcommand{\Gal}{\text{Gal}}
+\renewcommand{\char}{\text{char }}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\mfk}[1]{\mathfrak{#1}}
+\newcommand{\wt}{\text{wt}}
+\newcommand{\vx}[1]{\mathtt{#1}}
+%\renewcommand{\wt}[1]{\mathtt{#1}}
+\begin{document} \maketitle
+\vspace{-80pt}
+
+\textbf{Due:} \textbf{Friday}, March 29th, at 9:00am via Gradescope.
+
+\textbf{Instructions:} Students should complete and submit all problems. Textbook problems are from Dummit and Foote, \emph{Abstract Algebra, 3rd Edition}. All assertions require proof, unless otherwise stated. Typesetting your homework using LaTeX is recommended, and will gain you 2 bonus points per assignment.
+
+\begin{enumerate}
+
+
+\item[1.] \textbf{Dummit and Foote \#13.3.3:} \textit{Prove that an algebraically closed field must be infinite.}
+
+\item[2.] \textbf{Dummit and Foote \#13.3.4:} \textit{Construct the finite field of 16 elements and find a generator for the multiplicative group. How many generators are there?}
+
+\item[3.] \textbf{Dummit and Foote \#13.3.8:} \textit{Determine the splitting field of the polynomial $f(x) = x^p - x - a$ over $\F_p$ where $a\ne 0, a\in F_p$. Show explicitly that the Galois group is cyclic.}
+
+\item[4.] \textbf{Dummit and Foote \#13.4.2:} \textit{Find a primitive element for $\Q(\sqrt{2}, \sqrt{3}, \sqrt{5})$ over $\Q$.}
+
+\item[5.] \textbf{Dummit and Foote \#13.4.3:} \textit{Let $F$ be a field contained in the ring $\Mat_n(\Q)$ of $n \times n$ matrices over $\Q$. Here, $\Q\subseteq \Mat_n(\Q)$ is identified with the scalar diagonal matrices by the inclusion \[q\mapsto qI = \begin{bmatrix} q &&& \\ &q&& \\ &&\cdots& \\ &&&q\end{bmatrix}.\] Prove that $[F : \Q] \le n$.} (\emph{I do have a hint for this one, if you ask})
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage, amsmath, amssymb, amsthm, amscd, setspace, bm, graphicx, indentfirst, multirow, tikz, enumerate, verbatim, appendix}
+
+\usepackage{adjustbox,amsfonts,array,graphicx,booktabs,tabularx,multirow,multicol,stmaryrd, tabu}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{hyperref}
+\usetikzlibrary{arrows.meta}
+\title{Math 418, Spring 2024 -- Homework 1}
+\date{}
+\setlength{\parskip}{0.5cm}
+\setlength{\parindent}{0cm}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\real}{\textrm{Re }}
+\newcommand{\imag}{\textrm{Im }}
+\newcommand{\deriv}[2]{\frac{d #1}{d #2}}
+\newcommand{\sig}[1]{\sum_{#1 =1}^\infty}
+\newcommand{\un}[1]{\bigcup_{#1 =1}^\infty}
+\newcommand{\inter}[1]{\bigcap_{#1 =1}^\infty}
+\newcommand{\cyc}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
+\newcommand{\px}[2]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}}
+\newcommand{\wh}[1]{\widehat{#1}}
+\newcommand{\del}{\partial}
+\newcommand{\st}{ \; \big | \:}
+\newcommand{\ba}{\overline}
+\newcommand{\Int}{\mathrm{Int}}
+\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\rel}{\mathrm{rel}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\End}{\text{End}}
+\newcommand{\Mor}{\text{Mor}}
+\newcommand{\Ind}{\text{Ind}}
+\newcommand{\Irr}{\text{Irr}}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\mfk}[1]{\mathfrak{#1}}
+\newcommand{\wt}{\text{wt}}
+\newcommand{\vx}[1]{\mathtt{#1}}
+%\renewcommand{\wt}[1]{\mathtt{#1}}
+\begin{document} \maketitle
+\vspace{-80pt}
+
+\textbf{Due:} Wednesday, January 24th, at 9:00am via Gradescope.
+
+\textbf{Instructions:} Students should complete and submit all problems. Textbook problems are from Dummit and Foote, \emph{Abstract Algebra, 3rd Edition}. All assertions require proof, unless otherwise stated. Typesetting your homework using LaTeX is recommended, and will gain you 2 bonus points per assignment.
+
+\begin{enumerate}
+
+\item[1.] Dummit and Foote \#7.1.3
+
+\item[2.] Dummit and Foote \#7.1.11
+
+\item[3.] Dummit and Foote \#7.2.1
+
+\item[4.] Dummit and Foote \#7.3.2
+
+\item[5.] Dummit and Foote \#7.4.15
+
+\item[6.] Consider $R = \Z[\sqrt{-5}]$ with the (non-Euclidean) norm $N:R\to \Z_{\ge 0}$ given by $N(a) = |a|^2$. Note that $N(a\cdot b) = N(a)N(b)$.
+
+\begin{enumerate}
+    \item Prove that $a\in R$ is a unit if and only if $N(a) = 1$. Find all the units in $R$.
+    \item Recall that $r\in R$ is irreducible if whenever $r = ab$ then one of $a$ or $b$ is a unit. Use the norm to show that 2, 3, $1+\sqrt{-5}$, and $1-\sqrt{-5}$ are all irreducible elements of $R$
+    \item Show that $2, 3, 1 + \sqrt{-5}$, and $1 - \sqrt{-5}$ are not unit multiples of one another, proving that $R$ lacks unique factorization since $6 = 2\cdot 3 = (1+\sqrt{-5})(1-\sqrt{-5})$.
+\end{enumerate}
+
+ 
+\item[7.] Let $R$ be an integral domain. Recall that $g$ is a greatest common divisor of two elements $a, b\in R$
+if $g$ divides $a$ and $b$, and if $d$ divides $a$ and $b$ then $d$ divides $g$.
+
+\begin{enumerate}
+    \item Show that if $g$ and $g'$ are two gcds of $a,b\in R$, $g' = ug$ for some unit $u$.
+    \item Let $R = \Z[\sqrt{-5}]$. Prove that $6$ and $2+2\sqrt{-5}$ have no gcd. \emph{(Hint: Use the fact that $2$ and $1+\sqrt{-5}$ are both common divisors of these elements)}
+\end{enumerate}
+
+\end{enumerate}
+
+
+\end{document}

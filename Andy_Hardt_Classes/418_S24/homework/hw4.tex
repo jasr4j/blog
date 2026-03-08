@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage, amsmath, amssymb, amsthm, amscd, setspace, bm, graphicx, indentfirst, multirow, tikz, enumerate, verbatim, appendix}
+
+\usepackage{adjustbox,amsfonts,array,graphicx,booktabs,tabularx,multirow,multicol,stmaryrd, tabu}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{hyperref}
+\usetikzlibrary{arrows.meta}
+\title{Math 418, Spring 2024 -- Homework 4}
+\date{}
+\setlength{\parskip}{0.5cm}
+\setlength{\parindent}{0cm}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\real}{\textrm{Re }}
+\newcommand{\imag}{\textrm{Im }}
+\newcommand{\deriv}[2]{\frac{d #1}{d #2}}
+\newcommand{\sig}[1]{\sum_{#1 =1}^\infty}
+\newcommand{\un}[1]{\bigcup_{#1 =1}^\infty}
+\newcommand{\inter}[1]{\bigcap_{#1 =1}^\infty}
+\newcommand{\cyc}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
+\newcommand{\px}[2]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}}
+\newcommand{\wh}[1]{\widehat{#1}}
+\newcommand{\del}{\partial}
+\newcommand{\st}{ \; \big | \:}
+\newcommand{\ba}{\overline}
+\newcommand{\Int}{\mathrm{Int}}
+\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\rel}{\mathrm{rel}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\End}{\text{End}}
+\newcommand{\Mor}{\text{Mor}}
+\newcommand{\Ind}{\text{Ind}}
+\newcommand{\Irr}{\text{Irr}}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\mfk}[1]{\mathfrak{#1}}
+\newcommand{\wt}{\text{wt}}
+\newcommand{\vx}[1]{\mathtt{#1}}
+%\renewcommand{\wt}[1]{\mathtt{#1}}
+\begin{document} \maketitle
+\vspace{-80pt}
+
+\textbf{Due:} Wednesday, February 21st, at 9:00am via Gradescope.
+
+\textbf{Instructions:} Students should complete and submit all problems. Textbook problems are from Dummit and Foote, \emph{Abstract Algebra, 3rd Edition}. All assertions require proof, unless otherwise stated. Typesetting your homework using LaTeX is recommended, and will gain you 2 bonus points per assignment.
+
+\begin{enumerate}
+
+\item[1.] \textbf{Dummit and Foote \#13.2.1:} \textit{Let $\F$ be a finite field of characteristic $p$. Prove that $|\F| = p^n$ for some positive integer $n$.}
+
+\item[2.] \textbf{Dummit and Foote \#13.2.4:} \textit{Determine the degree over $\Q$ of $2 + \sqrt{3}$ and of $1 + \sqrt[3]{2} + \sqrt[3]{4}$.}
+
+\item[3.] \textbf{Dummit and Foote \#13.2.5:} \textit{Let $F = \Q(i)$. Prove that $x^3 - 2$ and $x^3 - 3$ are irreducible over $F$.}
+
+\item[4.] \textbf{Dummit and Foote \#13.2.7:} \textit{Prove that $\Q(\sqrt{2} + \sqrt{3}) = \Q(\sqrt{2}, \sqrt{3})$. Conclude that $[\Q(\sqrt{2} + \sqrt{3}) : \Q] = 4$. Find an irreducible polynomial satisfied by $\sqrt{2} + \sqrt{3}$.}
+
+\item[5.] \textbf{Dummit and Foote \#13.3.2:} \textit{Prove that Archimedes' construction actually trisects the angle $\theta$. (See the book for the construction).}
+
+\item[6.] \textbf{Dummit and Foote \#13.3.4:} \textit{The construction of the regular 7-gon amounts to the constructibility of $\cos(2\pi/7)$. We shall see later (Section 14.5 and Exercise 2 of Section 14. 7) that $\alpha = 2 \cos(2\pi/7)$ satisfies the equation $p(x) = x^3 + x^2 - 2x - 1 = 0$. Use this to prove that the regular 7-gon is not constructible by straightedge and compass.}
+
+\item[7.] \textbf{Dummit and Foote \#13.3.5:} \textit{Use the fact that $\alpha = 2\cos(2\pi/5)$ satisfies the equation $x^2 + x - 1 = 0$ to conclude that the regular $5-$gon is constructible by straightedge and compass.}
+
+\end{enumerate}
+
+
+\end{document}

@@ -1,0 +1,102 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usetheme{Boadilla}
+\newcommand{\ba}{\overline}
+\definecolor{resulthead}{RGB}{205,205,235}
+\definecolor{termshead}{RGB}{242,218,195}
+\begin{document}
+
+\title[Math and Proofs]{Math and Proofs Class 8}
+\date{November 14th, 2017}
+
+\begin{frame}[plain]
+\titlepage
+\end{frame}
+
+\begin{frame}{Summary of the class so far}
+\begin{itemize}
+\item First two weeks: looked at a couple different axiom systems
+\item Since then: set theory
+\item Last time: talked about the Axiom of Choice
+\item Goodstein's Theorem
+\begin{itemize}
+\item Can be \textit{stated} using the Peano axioms (normal arithmetic)
+\item Can only be \textit{proven} using ordinals (which are \textit{not} part of normal arithmetic)
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Hilbert's Program}
+\begin{itemize}
+\item Can we build a complete axiom system?
+\item ``Complete'' means that everything we can state using our axioms we can prove true or false using our axioms
+\begin{itemize}
+\item We don't have to prove \textit{everything} true or false, just everything we can state using the axioms
+\item For instance, ``I like ice cream'' is not a likely candidate for proof in any axiom system we come up with, but that's OK because we can't state it in our usual axiom systems
+\end{itemize}
+\item So in a sense, it's really easy to make a complete axiom system (no axioms or clock math)
+\item But we want axioms that are powerful, like our normal math
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Hilbert's Program (cont.)}
+\begin{itemize}
+\item In 1900, David Hilbert published a list of 23 open problems throughout mathematics that he considered to be the most important problems of the day
+\item Even now, many have not been solved
+\item Hilbert's Second Problem: Prove that the axioms of arithmetic are consistent (no contradictions)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Hilbert's Program (cont.)}
+\begin{itemize}
+\item Further, Hilbert envisioned a program to secure the foundations of mathematics, namely (copied from Wikipedia):
+\begin{itemize}
+\item A formulation of all mathematics; in other words all mathematical statements should be written in a precise formal language, and manipulated according to well defined rules.
+\item Completeness: a proof that all true mathematical statements can be proved in the formalism.
+\item Consistency: a proof that no contradiction can be obtained in the formalism of mathematics. This consistency proof should preferably use only ``finitistic'' reasoning about finite mathematical objects.
+\item Conservation: a proof that any result about ``real objects'' obtained using reasoning about ``ideal objects'' (such as uncountable sets) can be proved without using ideal objects.
+\item Decidability: there should be an algorithm for deciding the truth or falsity of any mathematical statement.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Godel's Incompleteness Theorem}
+\begin{itemize}
+\item Kurt Godel (1931): Hilbert's program is impossible
+\item There is no consistent system of axioms that is capable of proving true or false all statements about the natural numbers
+\item What this means: there are tons and tons more ``theorems'' like Goodstein's Theorem, that need extra axioms to prove
+\item No axiom system can prove its own consistency
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Godel's Incompleteness Theorem (cont.)}
+\begin{itemize}
+\item Example: The axiom of choice cannot be proved or disproved
+\item Example: The continuum hypothesis cannot be proved or disproved (whether we assume the axiom of choice or not)
+\item Proof idea: encode statement as symbols, and use that to encode statements as numbers
+\item Define a statement that roughly means ``I am not provable'' (not easy to do, but Godel did it)
+\item This is a paradox, which means that not every statement can be proved or disproved
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Implications from Godel's Incompleteness Theorem}
+\begin{itemize}
+\item We can never make an axiom system that can prove everything we want it to prove
+\item We can also never prove that an axiom system is consistent
+\item So we need to be really careful in choosing our axioms
+\item However, we can use a more sophisticated viewpoint to make this much less of a problem than it seems. If we assume certain things about ordinals, then we can use this to prove the consistency of our axioms
+\item So as long as these ordinal assumptions are correct, we don't have to worry
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusion}
+\begin{itemize}
+\item What this \textit{doesn't} mean is that math is useless or wrong
+\item Math is still the most successful and accurate way we have of understanding the universe
+\item It is highly likely that our axioms are consistent; we just can never prove it
+\item We may just need to think of it more as a science, instead of some greater form of understanding, and with this viewpoint, it's by far the most accurate science of them all
+\end{itemize}
+\end{frame}
+
+
+\end{document}

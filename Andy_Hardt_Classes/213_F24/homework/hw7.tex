@@ -1,0 +1,140 @@
+\documentclass{article}
+%%%%%%%%%%%%%
+% Loads packages
+%%%%%%%%%%%%%
+\usepackage[table]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{geometry} %package needed to set margins
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mdframed}
+\usepackage{tikz}
+\usepackage{amsfonts}
+
+\usepackage{listings}% http://ctan.org/pkg/listings
+\lstset{
+  basicstyle=\ttfamily,
+  mathescape
+}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\chead{\textbf{Homework 7}}
+\lhead{Math 213, Fall 2024}
+\rhead{Due Sunday, 10/20 at 11:59pm}
+
+%%%%%%%%%%%%%
+% Sets margins
+%%%%%%%%%%%%%
+\newgeometry{left=1.5in,right=1in,top=1in,bottom=1in}
+\setlength\headsep{3pt}
+
+%%%%%%%%%%%%%
+% Creates problem and solution environments
+%%%%%%%%%%%%%
+
+% Solution Environment
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+% Problem Environment
+\newenvironment{problem}[1]
+    {\begin{mdframed}[default]
+    \textbf{Problem #1:}
+    }
+    {\end{mdframed}
+    }
+    
+%%%%%%%%%%%
+% Custom Commands
+%%%%%%%%%%%
+\newcommand{\gOne}{\cellcolor{green!50!white} 1}
+\newcommand{\rZero}{\cellcolor{red!50!white} 0}
+
+\begin{document}
+
+
+
+
+\begin{problem}{\S 8.1 - 12}
+\begin{itemize}
+    \item[(a)] Find a recurrence relation for the number of ways to climb $n$ stairs if the person climbing the stairs can take one, two, or three at a time.
+    \item[(b)] What are the initial conditions?
+    \item[(c)] In how many ways can this person climb a flight of eight stairs?
+\end{itemize}
+\end{problem}
+
+\begin{problem}{\S 8.1 - 20}
+A bus driver pays all tolls, using only nickels and dimes, by throwing one coin at a time into the mechanical toll collector.
+\begin{itemize}
+    \item[(a)] Find a recurrence relation for the number of different ways the bus driver can pay a toll of $n$ cents (where the order in which the coins are used matters).
+    \item[(b)] In how many different ways can the driver pay a toll of 45 cents?
+\end{itemize}
+\end{problem}
+
+\begin{problem}{\S 8.1 - 26}
+\begin{itemize}
+    \item[(a)] Find a recurrence relation for the number of ways to completely cover a $2 \times n$ checkerboard with $1 \times 2$ dominoes.
+    \item[(b)] What are the initial conditions for the recurrence relation in part (a)?
+    \item[(c)] How many ways are there to completely cover a $2 \times 17$ checkerboard with $1 \times 2$ dominoes?
+\end{itemize}
+\end{problem}
+
+\begin{problem}{\S 8.2 - 2}
+Classify each recurrence relation by stating (i) whether it is linear or nonlinear, (ii) whether it is homogeneous or nonhomogeneous, (iii) its order, and (iv) if it has constant coefficients.
+\begin{itemize}
+    \item[(a)] $a_n = 3a_{n-2}$
+    \item[(b)] $a_n = 3$
+    \item[(c)] $a_n = a_{n-1}^2$
+    \item[(d)] $a_n = a_{n-1} + 2a_{n-3}$
+    \item[(e)] $a_n = a_{n-1}/n$
+    \item[(f)] $a_n = a_{n-1} + a_{n-2} + n + 3$
+    \item[(g)] $a_n = 4a_{n-2} + 5a_{n-4} + 9a_{n-7}$
+\end{itemize}
+\end{problem}
+
+\begin{problem}{\S 8.2 - 4(a,d,e)}
+Solve each recurrence relation along with the given initial conditions.
+\begin{itemize}
+    \item[(a)] $a_n = a_{n-1} + 6a_{n-2}$ for $n \geq 2$, $a_0 = 3$, $a_1 = 6$
+    \item[(d)] $a_n = 2a_{n-1} - a_{n-2}$ for $n \geq 2$, $a_0 = 4$, $a_1 = 1$
+    \item[(e)] $a_n = a_{n-2}$ for $n \geq 2$, $a_0 = 5$, $a_1 = -1$
+\end{itemize}
+\end{problem}
+
+\begin{problem}{\S 8.2 - 28}
+\begin{itemize}
+    \item[(a)] Find all solutions of the recurrence relation $a_n = 2a_{n-1} + 2n^2$.
+    \item[(b)] Find all solutions of the recurrence relation in part (a) with initial condition $a_1 = 4$.
+\end{itemize}
+\end{problem}
+
+\begin{problem}{\S 8.5 - 5}
+Find the number of elements in $A_1 \cup A_2 \cup A_3$ if there are 100 elements in each set and if
+\begin{itemize}
+    \item[(a)] the sets are pairwise disjoint.
+    \item[(b)] there are 50 common elements in each pair of sets and no elements in all three sets.
+    \item[(c)] there are 50 common elements in each pair of sets and 25 elements in all three sets.
+    \item[(d)] the sets are equal.
+\end{itemize}
+\end{problem}
+
+\begin{problem}{\S 8.5 - 10}
+Find the number of positive integers not exceeding 100 that are not divisible by 5 or 7.
+\end{problem}
+
+\begin{problem}{\S 8.5 - 14}
+How many permutations of the 26 letters of the English alphabet do not contain any of the strings \emph{fish}, \emph{rat}, or \emph{bird}?
+\end{problem}
+
+\begin{problem}{\S 8.5 - 20}
+How many elements are in the union of five sets if the sets contain 10,000 elements each, each pair of sets has 1,000 common elements, each triple of sets has 100 common elements, every four of the sets have 10 common elements, and there is 1 element in all five sets?
+\end{problem}
+
+
+
+
+\end{document}

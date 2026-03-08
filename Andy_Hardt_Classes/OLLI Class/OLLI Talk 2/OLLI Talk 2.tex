@@ -1,0 +1,108 @@
+\documentclass{beamer}
+\usetheme{Boadilla}
+\newcommand{\ba}{\overline}
+\definecolor{resulthead}{RGB}{205,205,235}
+\definecolor{termshead}{RGB}{242,218,195}
+\begin{document}
+
+\title[Math and Proofs]{Math and Proofs Class 2}
+\date{September 26th, 2017}
+
+\begin{frame}[plain]
+\titlepage
+\end{frame}
+
+\begin{frame}{Recap of Last Class}
+\begin{itemize}
+\item We looked at 2 examples of axiom systems
+\begin{itemize}
+\item Euclidean Geometry
+\item Peano Axioms of Arithmetic
+\end{itemize}
+\item Left off before proving that addition is commutative
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Peano Axioms}
+\begin{enumerate}
+\item Zero is a number
+\item If $a$ is a number, the successor of $a$ is a number
+\item Zero is not the successor of a number
+\item Two numbers of which the successors are equal are themselves equal
+\item If a set $S$ of numbers contains zero and also the successor of every number in $S$, then every number is in $S$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Set Theory}
+\begin{itemize}
+\item System we use today
+\item Pioneered by Georg Cantor in the 1890s
+\item Kronecker: \textit{I don't know what predominates in Cantor's Theory -- philosophy or theology, but I am sure that there is no mathematics there}
+\item Feferman: \textit{Simply not relevant to everyday mathematics}
+\item Hilbert: \textit{No one will drive us from the paradise which Cantor created for us}
+\item Subsumes both Euclidean geometry and the Peano axioms (and much else)
+\item (Much of this material is taken from \textit{Doing Mathematics} by Steven Galovich and from \textit{An Outline of Set Theory} by James M. Henle)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Set Theory (cont.)}
+\begin{itemize}
+\item Undefined terms: set, element
+\item Axioms: ZFC
+\begin{itemize}
+\item Equality: Two sets are equal if and only if they have the same elements
+\item Empty Set: There is a set with no elements (called the \emph{empty set}: $\emptyset$)
+\item Union: If $d$ is a set of sets, then the union of these sets is a set
+\item Power Set: If $d$ is a set, then the collection of all subsets of $d$ is also a set (called the power set: $\mathcal{P}(d)$)
+\item Many more, some of which are quite technical
+\end{itemize}
+\item Notation: $=, $\{\}$, \in, \subseteq, \emptyset, \cup, \cap, \setminus, \mathcal{P}(d)$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Set Theory Results}
+\begin{enumerate}
+\item For any set $A$, $\emptyset \subseteq A$
+\item For any set $A$, $A\subseteq A$
+\item If $A$, $B$, and $C$ are sets where $A\subset B$ and $B\subset C$, then $A\subset C$
+\item Let $A$ and $B$ be sets. Then $A=B$ if and only if $A\subset B$ and $B\subset A$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Exercise 1}
+Let $A = \{x,y,\{x,y\}\}$. True or false:
+\begin{enumerate}
+\item $\{x,y\}\subset A$
+\item $\{x,y\}\in A$
+\item $\{y\}\subset A$
+\item $\{y\}\in A$
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Exercise 2}
+Let $A = \{1,2,3\}, B = \{2,3,4\}, C = \{4,5,6\}$. Find each of the following sets:
+\begin{enumerate}
+\item $A\cup B$
+\item $A\cap B$
+\item $B\cap C$
+\item $A\setminus B$
+\item $A\cap (B\cup C)$
+\item $(A\cap B)\cup (A\cap C)$
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{More Set Theory Results}
+Let $A,B,C$ be sets
+\begin{enumerate}
+\item $A\cap (B\cup C) = (A\cap B)\cup (A\cap C)$
+\item $A\cup (B\cap C) = (A\cup B)\cap (A\cap C)$ (exercise)
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Next Time}
+\begin{itemize}
+\item More set theory!
+\end{itemize}
+\end{frame}
+
+\end{document}

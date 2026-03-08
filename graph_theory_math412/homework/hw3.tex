@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage, amsmath, amssymb, amsthm, amscd, setspace, bm, graphicx, indentfirst, multirow, tikz, enumerate}
+\usepackage{adjustbox,amsfonts,array,graphicx,booktabs,tabularx,multirow,multicol,stmaryrd, tabu}
+\usepackage[utf8]{inputenc}
+\usetikzlibrary{arrows.meta}
+\title{Math 412, Fall 2023 -- Homework 3}
+\date{}
+\setlength{\parskip}{0.5cm}
+\setlength{\parindent}{0cm}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\ba}{\overline}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\End}{\text{End}}
+\begin{document} \maketitle
+\vspace{-80pt}
+
+\textbf{Due:} Wednesday, September 13th, at 9:00AM via Gradescope
+
+\textbf{Instructions:} Students taking the course for three credit hours (undergraduates, most graduate
+students) should choose four of the following five problems to solve and turn in--if you do all five, only the first four will be graded. Graduate students
+taking the course for four credits should solve all five. Problems that use the word ``describe”,
+``determine”, ``show", or ``prove" require proof for all claims.
+
+\begin{enumerate}
+
+\item[1.] Let $G$ be an $n$-vertex simple graph, with $n \ge 2$. Determine the maximum possible number of
+edges in $G$ for each of the following conditions:
+
+\begin{enumerate}
+\item[(a)] $G$ has an independent set of size $a$.
+\item[(b)] $G$ has exactly $k$ connected components.
+\item[(c)] $G$ is disconnected.
+\end{enumerate}
+
+\item[2.] Determine for which values of $n$ there exists an $n$-vertex 5-regular simple connected graph.
+
+\item[3.] Consider the $n$-dimensional hypercube $Q_n$. Let $C$ be a cycle of length $2r$ in $Q_n$ for some $r\le n$. Prove that $C$ is contained in an $r$-dimensional hypercube $Q_r\subseteq Q_n$.
+
+\item[4.] Using the type of argument that we used to prove Mantel’s Theorem in Friday's lecture (see posted
+lecture notes), prove that for $n\ge 1$ the only $n$-vertex triangle free simple graph with the
+maximum possible number of edges is $K_{\lfloor \frac{n}{2}\rfloor,\lceil \frac{n}{2}\rceil}$.
+
+\item[5.] Using Problem 4, determine the minimum number of edges for any $n$-vertex connected graph with no independent set of size 3 or larger.
+
+
+\end{enumerate}
+
+
+\end{document}

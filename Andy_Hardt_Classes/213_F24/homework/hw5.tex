@@ -1,0 +1,144 @@
+\documentclass{article}
+%%%%%%%%%%%%%
+% Loads packages
+%%%%%%%%%%%%%
+\usepackage[table]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{geometry} %package needed to set margins
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mdframed}
+\usepackage{tikz}
+\usepackage{amsfonts}
+
+\usepackage{listings}% http://ctan.org/pkg/listings
+\lstset{
+  basicstyle=\ttfamily,
+  mathescape
+}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\chead{\textbf{Homework 5}}
+\lhead{Math 213, Fall 2024}
+\rhead{Due Sunday, 10/6 at 11:59pm}
+
+%%%%%%%%%%%%%
+% Sets margins
+%%%%%%%%%%%%%
+\newgeometry{left=1.5in,right=1in,top=1in,bottom=1in}
+\setlength\headsep{3pt}
+
+%%%%%%%%%%%%%
+% Creates problem and solution environments
+%%%%%%%%%%%%%
+
+% Solution Environment
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+% Problem Environment
+\newenvironment{problem}[1]
+    {\begin{mdframed}[default]
+    \textbf{Problem #1:}
+    }
+    {\end{mdframed}
+    }
+    
+%%%%%%%%%%%
+% Custom Commands
+%%%%%%%%%%%
+\newcommand{\gOne}{\cellcolor{green!50!white} 1}
+\newcommand{\rZero}{\cellcolor{red!50!white} 0}
+
+\begin{document}
+
+\begin{problem}{\S 6.3 - 16}
+How many subsets with an odd number of elements does a set with 10 elements have?
+\end{problem}
+
+\begin{problem}{\S 6.3 - 20}
+How many bit strings of length 10 have
+\begin{enumerate}
+    \item[(a)] exactly three ``0''s?
+    \item[(b)] more ``0''s than ``1''s?
+    \item[(c)] at least seven ``1''s?
+    \item[(d)] at least three ``1''s?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{\S 6.3 - 24}
+How many ways are there for ten women and six men to stand in a line so that no two men stand next to each other?
+\end{problem}
+
+\begin{problem}{\S 6.3 - 42}
+Find a formula for the number of ways to seat $r$ of $n$ people around a circular table, where seatings are considered the same if every person has the same two neighbors without regard to which side these neighbors are sitting on.
+\end{problem}
+
+\begin{problem}{\S 6.4 - 10}
+Give a formula for the coefficient of $x^k$ in the expansion of $(x+1/x)^{100}$, where $k$ is an integer.
+\end{problem}
+
+\begin{problem}{\S 6.4 - 12}
+The row of Pascal's triangle containing the binomia coefficients ${ 10 \choose k}$, for $0 \leq k \leq 10$, is:
+\[1~~10~~45~~120~~210~~252~~210~~120~~45~~10~~1 \]
+Use Pascal's identity to produce the row immediately following this row in Pascal's triangle.
+\end{problem}
+
+\begin{problem}{\S 6.4 - 22}
+Prove the identity ${n \choose r}{r \choose k} = {n \choose k}{n-k \choose r-k}$, whenever $n, r,$ and $k$ are non-negative integers with $r \leq n$ and $k \leq r$,
+\begin{enumerate}
+    \item[(a)] using a combinatorial argument.
+    \item[(b)] using an argument based on the formula for the number of $r$-combinations of a set with $n$ elements.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{\S 6.4 - 27(a)}
+Prove the \textbf{hockeystick identity}
+\[ \sum_{k=0}^r {n+k \choose k} = {n + r + 1 \choose r } \]
+whenever $n$ and $r$ are positive integers, using a combinatorial argument.
+\end{problem}
+
+\begin{problem}{\S 6.5 - 10(a,c,d)}
+A croissant shop has plain croissants, cherry croissants, chocolate croissants, almond croissants, apple croissants, and broccoli croissants. How many ways are there to choose
+\begin{enumerate}
+    \item[(a)] a dozen croissants?
+    \item[(c)] two dozen croissants with at least two of each kind?
+    \item[(d)] two dozen croissants with no more than two broccoli croissants?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{\S 6.5 - 20}
+How many solutions are there to the inequality
+\[ x_1 + x_2 + x_3 \leq 11, \]
+where $x_1, x_2,$ and $x_3$ are non-negative integers?
+\end{problem}
+
+\begin{problem}{\S 6.5 - 26}
+How many positive integers less than $1,000,000$ have exactly one digit equal to $9$ and have a sum of digits equal to 13?
+\end{problem}
+
+\begin{problem}{\S 6.5 - 46}
+A shelf holds 12 books in a row. How many ways are there to choose five books so that no two adjacent books are chosen?
+\end{problem}
+
+\begin{problem}{\S 7.1 - 10}
+What is the probability that a five-card poker hand contains the two of diamonds and the three of spades?
+\end{problem}
+
+\begin{problem}{\S 7.1 - 12}
+What is the probability that a five-card poker hand contains exactly one ace?
+\end{problem}
+
+\begin{problem}{\S 7.1 - 14}
+What is the probability that a five-card poker hand contains cards of five different kinds?
+\end{problem}
+
+\begin{problem}{\S 7.1 - 16}
+What is the probability that a five-card poker hand contains a flush, that is, five cards of the same suit?
+\end{problem}
+
+\end{document}

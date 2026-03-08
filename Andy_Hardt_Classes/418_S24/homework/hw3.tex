@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage, amsmath, amssymb, amsthm, amscd, setspace, bm, graphicx, indentfirst, multirow, tikz, enumerate, verbatim, appendix}
+
+\usepackage{adjustbox,amsfonts,array,graphicx,booktabs,tabularx,multirow,multicol,stmaryrd, tabu}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{hyperref}
+\usetikzlibrary{arrows.meta}
+\title{Math 418, Spring 2024 -- Homework 3}
+\date{}
+\setlength{\parskip}{0.5cm}
+\setlength{\parindent}{0cm}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\real}{\textrm{Re }}
+\newcommand{\imag}{\textrm{Im }}
+\newcommand{\deriv}[2]{\frac{d #1}{d #2}}
+\newcommand{\sig}[1]{\sum_{#1 =1}^\infty}
+\newcommand{\un}[1]{\bigcup_{#1 =1}^\infty}
+\newcommand{\inter}[1]{\bigcap_{#1 =1}^\infty}
+\newcommand{\cyc}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
+\newcommand{\px}[2]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}}
+\newcommand{\wh}[1]{\widehat{#1}}
+\newcommand{\del}{\partial}
+\newcommand{\st}{ \; \big | \:}
+\newcommand{\ba}{\overline}
+\newcommand{\Int}{\mathrm{Int}}
+\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\rel}{\mathrm{rel}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\End}{\text{End}}
+\newcommand{\Mor}{\text{Mor}}
+\newcommand{\Ind}{\text{Ind}}
+\newcommand{\Irr}{\text{Irr}}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\mfk}[1]{\mathfrak{#1}}
+\newcommand{\wt}{\text{wt}}
+\newcommand{\vx}[1]{\mathtt{#1}}
+%\renewcommand{\wt}[1]{\mathtt{#1}}
+\begin{document} \maketitle
+\vspace{-80pt}
+
+\textbf{Due:} Wednesday, February 7th, at 9:00am via Gradescope.
+
+\textbf{Instructions:} Students should complete and submit all problems. Textbook problems are from Dummit and Foote, \emph{Abstract Algebra, 3rd Edition}. All assertions require proof, unless otherwise stated. Typesetting your homework using LaTeX is recommended, and will gain you 2 bonus points per assignment.
+
+\begin{enumerate}
+
+\item[1.] \textbf{Dummit and Foote \#9.3.2:} \textit{Prove that if $f(x)$ and $g(x)$ are polynomials with rational coefficients whose product $f(x)g(x)$ has integer coefficients, then the product of any coefficient of $g(x)$ with any coefficient of $f(x)$ is an integer.}
+
+\item[2.] \textbf{Dummit and Foote \#9.4.2d:} \textit{Let $p$ be an odd prime. Prove that the polynomial $f(x) = \frac{(x+2)^p - 2^p}{x}$ is irreducible in $\Z[x]$.}
+
+\item[3.] \textbf{Dummit and Foote \#9.4.10:} \textit{Prove that the polynomial $p(x) = x^4 - 4x^2 + 8x + 2$ is irreducible over the quadratic field $F = \Q(\sqrt{-2}) = \{a + b\sqrt{-2} | a, b \in \Q\}$.}
+
+\item[4.] \textbf{Dummit and Foote \#9.4.12:} \textit{Prove that $f(x) = x^{n-1} + x^{n-2} + \cdots + x + 1$ is irreducible over $\Z$ if and only if $n$ is a prime.}
+
+\item[5.] \textbf{Dummit and Foote \#13.1.1:} \textit{Show that $p(x) = x^3 + 9x +6$ is irreducible in $\Q[x]$. Let $\theta$ be a root of $p(x)$. Find the inverse of $1+\theta$ in $\Q(\theta)$ as a polynomial in $\theta$}
+
+\item[6.] \textbf{Dummit and Foote \#13.1.3:} \textit{Show that $p(x) = x^3+x+1$ is irreducible over $\F_2$ and let $\theta$ be a root. Compute the powers of $\theta$ in $\F_2(\theta)$ as polynomials in $\theta$ of degree $\le 2$.}
+
+\item[7.] \textbf{Dummit and Foote \#13.1.4:} \textit{Prove directly that the map $a+b\sqrt{2}\mapsto a-b\sqrt{2}$ is an isomorphism of $\Q(\sqrt{2})$ with itself.}
+
+\end{enumerate}
+
+
+\end{document}

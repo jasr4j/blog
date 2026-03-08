@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage, amsmath, amssymb, amsthm, amscd, setspace, bm, graphicx, indentfirst, multirow, tikz, enumerate, verbatim, appendix}
+
+\usepackage{adjustbox,amsfonts,array,graphicx,booktabs,tabularx,multirow,multicol,stmaryrd, tabu}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{hyperref}
+\usetikzlibrary{arrows.meta}
+\title{Math 418, Spring 2024 -- Homework 6}
+\date{}
+\setlength{\parskip}{0.5cm}
+\setlength{\parindent}{0cm}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\real}{\textrm{Re }}
+\newcommand{\imag}{\textrm{Im }}
+\newcommand{\deriv}[2]{\frac{d #1}{d #2}}
+\newcommand{\sig}[1]{\sum_{#1 =1}^\infty}
+\newcommand{\un}[1]{\bigcup_{#1 =1}^\infty}
+\newcommand{\inter}[1]{\bigcap_{#1 =1}^\infty}
+\newcommand{\cyc}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
+\newcommand{\px}[2]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}}
+\newcommand{\wh}[1]{\widehat{#1}}
+\newcommand{\del}{\partial}
+\newcommand{\st}{ \; \big | \:}
+\newcommand{\ba}{\overline}
+\newcommand{\Int}{\mathrm{Int}}
+\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\rel}{\mathrm{rel}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\End}{\text{End}}
+\newcommand{\Aut}{\text{Aut}}
+\newcommand{\Mor}{\text{Mor}}
+\newcommand{\Ind}{\text{Ind}}
+\newcommand{\Irr}{\text{Irr}}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\mfk}[1]{\mathfrak{#1}}
+\newcommand{\wt}{\text{wt}}
+\newcommand{\vx}[1]{\mathtt{#1}}
+%\renewcommand{\wt}[1]{\mathtt{#1}}
+\begin{document} \maketitle
+\vspace{-80pt}
+
+\textbf{Due:} Wednesday, March 6th, at 9:00am via Gradescope.
+
+\textbf{Instructions:} Students should complete and submit all problems. Textbook problems are from Dummit and Foote, \emph{Abstract Algebra, 3rd Edition}. All assertions require proof, unless otherwise stated. Typesetting your homework using LaTeX is recommended, and will gain you 2 bonus points per assignment.
+
+\begin{enumerate}
+
+\item[1.] \textbf{Dummit and Foote \#13.5.3:} \textit{Prove that $d$ divides $n$ if and only if $x^d - 1$ divides $x^n - 1$.} (Hint: if $n = qd+r$, then $x^n-1 = (x^{qd+r}-x^r) + (x^r-1)$)
+
+\item[2.] \textbf{Dummit and Foote \#13.5.6:} \textit{Prove that $x^{p^n-1}-1 = \prod_{\alpha\in\F_{p^n}^\times} (x-\alpha)$. Conclude that $\prod_{\alpha\in\F_{p^n}^\times}\alpha = (-1)^{p^n}$ so the product of the nonzero elements of a finite field is $+1$ if $p = 2$ and $-1$ if $p$ is odd. For $p$ odd and $n = 1$ derive Wilson 's Theorem: $(p - 1)! = -1 (\mod p)$.}
+
+\item[3.] \textbf{Dummit and Foote \#13.6.2:} \textit{Let $\zeta_n$ be a primitive $n$th root of unity and let $d$ be a divisor of $n$. Prove that $\zeta_n^d$ is a primitive $(n/d)$th root of unity.}
+
+\item[4.] \textbf{Dummit and Foote \#13.6.3:}  \textit{Prove that if a field contains the $n$th roots of unity for $n$ odd then it also contains the $2n$th roots of unity.}
+
+\item[5.] \textbf{Dummit and Foote \#13.6.7:}  \textit{Use the Mobius Inversion formula indicated in Section 14.3 to prove \[\Phi_n(x) = \prod_{d|n} (x^d-1)^{\mu(n/d)}.\]}
+
+\item[6.] \textbf{Dummit and Foote \#14.1.3:}  \textit{Determine the fixed field of complex conjugation on $\C$.}
+
+\item[7.] \textbf{Dummit and Foote \#14.1.5:}  \textit{Determine the automorphisms of the extension $\Q(\sqrt[4]{2})/\Q(\sqrt{2})$ explicitly.} (Hint: Use Dummit \& Foote Proposition 14.5)
+
+\end{enumerate}
+
+\end{document}

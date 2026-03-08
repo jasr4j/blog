@@ -1,0 +1,88 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usetheme{Boadilla}
+\newcommand{\ba}{\overline}
+\definecolor{resulthead}{RGB}{205,205,235}
+\definecolor{termshead}{RGB}{242,218,195}
+\begin{document}
+
+\title[Math and Proofs]{Math and Proofs Class 5}
+\date{October 24th, 2017}
+
+\begin{frame}[plain]
+\titlepage
+\end{frame}
+
+\begin{frame}{Recap of Last Class}
+\begin{itemize}
+\item We looked at equivalence relations, functions, and  bijections.
+\item At the very end, we started to talk about cardinality.
+\item This class: more about cardinality
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Recap: Functions and Bijections}
+Let $A$ and $B$ be sets
+\begin{itemize}
+\item A \emph{function} from $A$ to $B$ is a set of ordered pairs where the first element in each pair is in $A$ and the second is in $B$ AND each input element appears exactly once.
+\item A \emph{bijection} is a function where each output element appears exactly once too.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Cardinality}
+\begin{itemize}
+\item Two sets $A$ and $B$ are equivalent if there's a bijection between them.
+\item Remember what this means: $A$ and $B$ are equivalent if they have the same $\mathbf{number}$ of elements
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Application of Cardinality for Finite Sets: Pigeonhole Principle}
+Pigeonhole Principle: If you put $n$ pigeons in $m$ pigeonholes and $n>m$, then there must be a hole with more than one pigeon.
+Examples:
+\begin{itemize}
+\item Prove that in any room with at least 8 people, at least two of them were born on the same day of the week.
+\item Minneapolis has 413,000 people. Humans have no more than 300,000 hairs of their heads. Prove that there are (at least) two people in Minneapolis with the same number of hairs on their heads.
+\item Suppose 5 points are chosen in (or on) the equilateral triangle of side length 1 inch. Prove that there are two points in the triangle that are no farther than $\frac{1}{2}$ inch apart.
+\item Video: https://www.youtube.com/watch?v=ROnetLvbl6M
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Schroder-Bernstein Theorem}
+\begin{itemize}
+\item An \emph{injection} is a function where each output appears AT MOST once (could be zero times). We say a function is \emph{injective} if it is an injection.
+\item A bijection, then, is an injection where every output is hit.
+\item Examples:
+\begin{enumerate}
+\item $A = \{1,2\}, B = \{1,2,3\}, f(1)=2, f(2)=1$ is injective
+\item $A = \{1,2\}, B = \{1,2,3\}, f(1)=2, f(2)=2$ is NOT injective.
+\item $A = \{1,2,3\}, B = \{1,2\}$, if $f:A\to B$, then $f$ cannot be injective.
+\end{enumerate}
+\item So if there is an injection from $A$ to $B$, this means that $|A|\le |B|$.
+\item Schroder-Bernstein: If there are injections $f:A\to B$ and $g:B\to A$, then there a bijection from $A$ to $B$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Bijections Between Infinite Sets}
+\begin{itemize}
+\item $|\{\text{even integers}\}| = |\{\text{odd integers}\}|$
+\item $|\{\text{even integers}\}| = |\{\text{integers}\}|$
+\item $|\{\text{odd integers}\}| = |\{\text{integers}\}|$
+\item $|\{\text{integers}\}| = |\{\text{rational numbers}\}|$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Do All Infinite Sets Have the Same Cardinality?}
+\begin{itemize}
+\item $|\{\text{integers}\}| < |\{\text{real numbers}\}|$
+\item If $A$ is a set, then $|A|<|P(A)|$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Next Time}
+\begin{itemize}
+\item Perhaps some more about cardinality (otherwise, it'll still come up in what's to come)
+\item Some ``controversial'' axioms
+\end{itemize}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,120 @@
+\documentclass{article}
+%%%%%%%%%%%%%
+% Loads packages
+%%%%%%%%%%%%%
+\usepackage[table]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{geometry} %package needed to set margins
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mdframed}
+\usepackage{tikz}
+\usepackage{amsfonts}
+
+\pagestyle{fancy}
+\fancyhf{}
+\chead{\textbf{Homework 1}}
+\lhead{Math 213, Fall 2024}
+
+%%%%%%%%%%%%%
+% Sets margins
+%%%%%%%%%%%%%
+\newgeometry{left=1.5in,right=1in,top=1in,bottom=1in}
+\setlength\headsep{3pt}
+
+%%%%%%%%%%%%%
+% Creates problem and solution environments
+%%%%%%%%%%%%%
+
+% Solution Environment
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+% Problem Environment
+\newenvironment{problem}[1]
+    {\begin{mdframed}[default]
+    \textbf{Problem #1:}
+    }
+    {\end{mdframed}
+    }
+    
+%%%%%%%%%%%
+% Custom Commands
+%%%%%%%%%%%
+\newcommand{\gOne}{\cellcolor{green!50!white} 1}
+\newcommand{\rZero}{\cellcolor{red!50!white} 0}
+
+\begin{document}
+
+\textbf{Due Sunday, September 1st at 11:59pm}
+
+\begin{problem}{\S 2.1: 10(a,c,e,g)}
+Determine whether the following statements are true or false.
+\begin{enumerate}
+    \item[(a)] $\emptyset \in \{ \emptyset \}$
+    \item[(c)] $\{ \emptyset \} \in \{ \emptyset \}$
+    \item[(e)] $\{ \emptyset \} \subset \{ \emptyset, \{ \emptyset \} \}$
+    \item[(g)] $\{ \{ \emptyset \} \} \subset \{ \{ \emptyset \}, \{ \emptyset \} \}$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{\S 2.1: 16}
+Use a Venn diagram to illustrate the relationships $A \subset B$ and $A \subset C$.
+\end{problem}
+
+\begin{problem}{\S 2.1: 20}
+What is the cardinality of each of the following sets?
+\begin{enumerate}
+    \item[(a)] $\emptyset$
+    \item[(b)] $\{ \emptyset \}$
+    \item[(c)] $\{ \emptyset, \{ \emptyset \} \}$
+    \item[(d)] $\{ \emptyset, \{ \emptyset \}, \{ \emptyset, \{ \emptyset \} \} \}$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{\S 2.1: 26}
+Show that if $A \subseteq C$ and $B \subseteq D$, then $A \times B \subseteq C \times D.$
+\end{problem}
+
+\begin{problem}{\S 2.1: 32(a,c)}
+Let $A = \{ a, b, c \}$, $B = \{ x, y \}$, and $C = \{ 0, 1 \}$. Find the following Cartesian products.
+\begin{enumerate}
+    \item[(a)] $A \times B \times C$ \item[(c)] $C \times A \times B$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{\S 2.2: 4}
+Let $A = \{ a, b, c, d, e \}$ and $B = \{ a, b, c, d, e, f, g, h \}$. Find:
+\begin{enumerate}
+    \item[(a)] $A \cup B$.
+    \item[(b)] $A \cap B$.
+    \item[(c)] $A - B$.
+    \item[(d)] $B - A$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{\S 2.2: 14}
+Find the sets $A$ and $B$ if $A - B = \{ 1, 5, 7, 8 \}$, $B-A = \{ 2, 10 \}$, and $A \cap B = \{ 3, 6, 9 \}$.
+\end{problem}
+
+\begin{problem}{\S 2.2: 15}
+Prove the second De Morgan law in Table 1 by showing that if $A$ and $B$ are sets, then $\overline{A \cup B} = \overline{A} \cap \overline{B}$ (a) showing each side is a subset of the other side and (b) by using a membership table.
+\end{problem}
+
+\begin{problem}{\S 2.2: 24}
+Let $A, B,$ and $C$ be sets. Show that $(A-B)-C = (A-C)-(B-C)$.
+\end{problem}
+
+\begin{problem}{\S 2.2: 26}
+Draw the Venn diagrams for each of the following combinations of the sets $A,B,$ and $C$.
+\begin{enumerate}
+    \item[(a)] $A \cap (B \cup C)$
+    \item[(b)] $\overline{A} \cap \overline{B} \cap \overline{C}$
+    \item[(c)] $(A-B) \cup (A-C) \cup (B-C)$
+\end{enumerate}
+\end{problem}
+
+
+\end{document}

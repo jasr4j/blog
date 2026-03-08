@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage, amsmath, amssymb, amsthm, amscd, setspace, bm, graphicx, indentfirst, multirow, tikz, enumerate, verbatim, appendix}
+
+\usepackage{adjustbox,amsfonts,array,graphicx,booktabs,tabularx,multirow,multicol,stmaryrd, tabu}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{hyperref}
+\usetikzlibrary{arrows.meta}
+\title{Math 418, Spring 2024 -- Homework 10}
+\date{}
+\setlength{\parskip}{0.5cm}
+\setlength{\parindent}{0cm}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\real}{\textrm{Re }}
+\newcommand{\imag}{\textrm{Im }}
+\newcommand{\deriv}[2]{\frac{d #1}{d #2}}
+\newcommand{\sig}[1]{\sum_{#1 =1}^\infty}
+\newcommand{\un}[1]{\bigcup_{#1 =1}^\infty}
+\newcommand{\inter}[1]{\bigcap_{#1 =1}^\infty}
+\newcommand{\cyc}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
+\newcommand{\px}[2]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}}
+\newcommand{\wh}[1]{\widehat{#1}}
+\newcommand{\del}{\partial}
+\newcommand{\st}{ \; \big | \:}
+\newcommand{\ba}{\overline}
+\newcommand{\Int}{\mathrm{Int}}
+\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\rel}{\mathrm{rel}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\End}{\text{End}}
+\newcommand{\Mat}{\text{Mat}}
+\newcommand{\Aut}{\text{Aut}}
+\newcommand{\Mor}{\text{Mor}}
+\newcommand{\Ind}{\text{Ind}}
+\newcommand{\Irr}{\text{Irr}}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\Fix}{\text{Fix}}
+\renewcommand{\char}{\text{char }}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\mfk}[1]{\mathfrak{#1}}
+\newcommand{\wt}{\text{wt}}
+\newcommand{\vx}[1]{\mathtt{#1}}
+%\renewcommand{\wt}[1]{\mathtt{#1}}
+\begin{document} \maketitle
+\vspace{-80pt}
+
+\textbf{Due:} Wednesday, April 31st, at 9:00am via Gradescope.
+
+\textbf{Instructions:} Students should complete and submit all problems. Textbook problems are from Dummit and Foote, \emph{Abstract Algebra, 3rd Edition}. All assertions require proof, unless otherwise stated. Typesetting your homework using LaTeX is recommended, and will gain you 2 bonus points per assignment.
+
+\begin{enumerate}
+
+\item[1.] Let $k$ be an algebraically closed field, and consider the polynomial ring $k[x,y]$.  
+  \begin{enumerate}
+  \item Let $V$ be the $x$-axis, i.e.~$V = V(y)$. Prove that $V$ is irreducible. [Hint: Show a prime ideal is radical.]
+  \item Prove that $V = V(x - y)$ is irreducible. 
+  \item Prove that $S = \{(a,a) \in k^2 |a \neq 1\}$ is \emph{not} an algebraic variety if $k = \C$.
+  \item What is the decomposition of $V = V(x^2 - y^2)$ into irreducibles?  \textbf{Warning:} The answer depends on $k$!
+  \end{enumerate}
+
+\item[2.] \textbf{Dummit and Foote \#15.1.2} Show that each of the following rings are not Noetherian by exhibiting an explicit infinite increasing chain of ideals:
+
+\begin{enumerate}
+\item the ring of continuous real valued functions on $[0, 1]$,
+\item the ring of all functions from any infinite set $X$ to $\Z/2\Z$.
+\end{enumerate}
+
+\item[3.] \textbf{Dummit and Foote \#15.1.20} \textit{If $f$ and $g$ are irreducible polynomials in $k[x, y]$ that are not associates (do not divide each other), show that $V((f, g))$ is either $\emptyset$ or a finite set in $k^2$.} [Hint: If $(f, g) \ne (1)$, show $(f, g)$ contains a nonzero polynomial in $k[x]$ (and similarly a nonzero polynomial in $k[y]$) by letting $R = k[x], F = k(x)$, and applying Gauss's Lemma to show $f$ and $g$ are relatively prime in $F[y]$.]
+
+\item[4.] \textbf{Dummit and Foote \#15.2.2} Let $I$ and $J$ be ideals in the ring $R$. Prove the following statements:
+\begin{enumerate}
+\item If $I^k\subseteq J$ for some $k\ge 1$, then $\sqrt{I}\subseteq\sqrt{J}$.
+\item If $I^k\subseteq J\subseteq I$ for some $k\ge 1$, then $\sqrt{I}=\sqrt{J}$.
+\item $\sqrt{IJ} = \sqrt{I\cap J} = \sqrt{I}\cap\sqrt{J}$.
+\item $\sqrt{\sqrt{I}} = \sqrt{I}$.
+\item $\sqrt{I}+\sqrt{J} \subseteq \sqrt{I+J}$ and $\sqrt{I+J} = \sqrt{\sqrt{I}+\sqrt{J}}$.
+\end{enumerate}
+
+\item[5.] \textbf{Dummit and Foote \#15.2.3} \textit{Prove that the intersection of two radical ideals is again a radical ideal.}
+
+\item[6.] \textbf{Dummit and Foote \#15.2.5} \textit{If $I = (xy, (x - y)z) \subseteq k[x, y, z]$ prove that $\sqrt{I} = (xy, xz, yz)$. For this ideal prove
+\emph{directly} that $V(I) = V(\sqrt{I})$, that $V(I)$ is not irreducible, and that $\sqrt{I}$ is not prime.}
+
+\end{enumerate}
+
+\end{document}

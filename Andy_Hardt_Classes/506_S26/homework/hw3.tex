@@ -1,0 +1,128 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage, amsmath, amssymb, amsthm, amscd, setspace, bm, graphicx, indentfirst, multirow, tikz, enumerate, verbatim, appendix}
+\usepackage{adjustbox,amsfonts,array,graphicx,booktabs,tabularx,multirow,multicol,stmaryrd, tabu}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{hyperref}
+\usetikzlibrary{arrows.meta}
+
+\usepackage{ytableau}
+\ytableausetup{tabloids, centertableaux}
+
+\title{Math 506, Spring 2026 -- Homework 3}
+\date{}
+\setlength{\parskip}{0.5cm}
+\setlength{\parindent}{0cm}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\F}{\mathbb{F}}
+\renewcommand{\t}[1]{\text{#1}}
+\newcommand{\ba}{\overline}
+\newcommand{\Tr}{\text{Tr}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\End}{\text{End}}
+\newcommand{\Aut}{\text{Aut}}
+\newcommand{\Mat}{\text{Mat}}
+\newcommand{\Sym}{\text{Sym}}
+\newcommand{\Res}{\text{Res}}
+\newcommand{\Ind}{\text{Ind}}
+\newcommand{\ind}{\text{ind}}
+\newcommand{\wt}{\text{wt}}
+
+\makeatletter
+\newcommand{\Wedge}{\@ifnextchar^\@Wedge{\@Wedge^{\,}}}
+\def\@Wedge^#1{\mathop{\bigwedge\nolimits^{\!#1}}}
+\makeatother
+
+\begin{document} \maketitle
+\vspace{-80pt}
+
+\textbf{Due:} Wednesday, 18th, at 9:00am via Gradescope.
+\textcolor{blue}{(Probably will be moved later, since this is during Spring Break)}
+
+\textbf{Instructions:} Students should complete and submit all problems. All assertions require proof unless otherwise stated. Typesetting your homework using LaTeX is recommended. For this homework, unless otherwise stated all groups are finite and all representations are finite dimensional and complex.
+
+\textbf{Notation:}
+\begin{itemize}
+    \item $\chi^\lambda$ is the irreducible character of the Specht module $S^\lambda$
+    \item $C_\lambda$ is the conjugacy class consisting of permutations of cycle type $\lambda$
+    \item $w_\lambda$ is a representative of $C_\lambda$.
+    \item $S_\lambda$ is the Young subgroup $S_\lambda = S_{\lambda_1}\times S_{\lambda_2}\times\cdots S_{\lambda_{\ell(\lambda)}}$.
+\end{itemize}
+
+\begin{enumerate}
+
+\item[1.] In this problem, we compute the character table for $S^\lambda$. Define the matrices $A = (A_{\lambda\mu})$ and $B = (B_{\lambda\mu})$ by
+\[
+A_{\lambda\mu} = |S_\lambda\cap C_\mu|, \qquad\qquad B_{\lambda\mu} = |S_\mu|K_{\lambda\mu},
+\]
+where rows and columns are ordered by lexicographic order, largest first.
+
+\begin{enumerate}
+    \item Explain why $M_\mu = \Ind_{S_\mu}^{S_n} V_{\t{triv}}$ (\emph{a sketch is fine for this part}).
+    \item Show that $A$ and $B$ are upper triangular and invertible.
+    \item Prove that $B(A^T)^{-1}$ is the character table of $S_n$.
+    \item Compute $A,B$, and the character table of $S_n$ when $n=4$.
+\end{enumerate}
+
+
+\item[2.] Let $M$ be the character table of a group $G$.
+
+\begin{enumerate}
+\item Use the orthogonality relations to give a formula (defined up to sign) for $\det M$.
+
+\item For any $\lambda\vdash n$, let $m_i(\lambda)$ be the number of parts of size $i$. Using part (a) in the case $G=S_n$, and also using Problem 1, prove the remarkable fact that for all $n$,
+\[
+\prod_{\lambda\vdash n} \prod_{1\le i\le \ell(\lambda)} \lambda_i = \prod_{\lambda\vdash n} \prod_{i\ge 1} m_i(\lambda)!.
+\]
+\end{enumerate}
+
+
+\item[3.] In this problem, we consider Specht modules over an arbitrary field $F$, as is covered in James' book. With respect to this field, $M^\lambda$ and $S^\lambda$ are defined the same way as over $\C$ (in particular, the coefficient of each tabloid appearing in a polytabloid is $\pm 1$). The Submodule Theorem (Theorem 30) still holds: with respect to the $S_n$-invariant bilinear form (no longer necessarily an inner product), any submodule of $M^\mu$ either contains $S^\mu$ or is contained in $(S^\mu)^\perp$.
+
+\begin{enumerate}
+    \item Prove that $S^\mu\cap (S^\mu)^\perp$ is a submodule, and furthermore it either equals $S^\mu$ or it is the unique maximal proper submodule of $S^\mu$. Prove that the quotient module $S^\mu/(S^\mu\cap (S^\mu)^\perp)$ is zero or irreducible.
+    \item In the case $\mu = (3,1)$, show that over any field either $S^\mu\cap (S^\mu)^\perp = \{0\}$ or $(S^\mu)^\perp\subseteq S^\mu$. Give a basis of the quotient module $S^\mu/(S^\mu\cap (S^\mu)^\perp)$.
+\end{enumerate}
+
+\item[4.] For a Young tableau $T$ of shape $\lambda \vdash n$ (with entries $1,\ldots,n$), recall the row stabilizer $R_T$ and column stabilizer $C_T$. Define the following elements of $\C[S_n]$:
+\[
+a_T = \sum_{w\in R_T} w, \qquad\qquad b_T = \sum_{w\in C_T} (-1)^w w, \qquad\qquad c_T = a_T b_T.
+\]
+$c_T$ is the \emph{Young symmetrizer} associated to $T$. ($b_T$ is what we called $\kappa_T$ in Definition 27).
+
+\begin{enumerate}
+\item Show that $a_T \sigma = a_T$ for $\sigma \in R_T$, that $b_T w = (-1)^w b_T$ for $w\in C_T$, and that $c_T\{T\} = |R_T| e_T$.
+\item Define $\phi: \C[S_n]c_T \to S^\lambda$ by $\phi(yc_T) = yc_T\{T\}$. Show that $\phi$ is an isomorphism of $S_n$-modules, so that $\C[S_n]c_T \cong S^\lambda$.
+\end{enumerate}
+
+
+\item[5.] The \emph{Hecke algebra} $\mathcal{H} 
+:= \mathcal{H}_q(S_n)$ is the $\C$-algebra with generators $T_1,T_2,\ldots,T_{n-1}$ and relations
+\[
+T_i^2 = (q-1)T_i + q,\qquad T_iT_{i+1}T_i = T_{i+1}T_iT_{i+1}, \qquad T_iT_j=T_jT_i \text{ when } |i-j|\ge 2.
+\]
+
+\begin{enumerate}
+    \item When $q=1$, show an isomorphism between $\mathcal{H}$ and the group algebra $\C[S_n]$. (\emph{no need to explicitly show bijectivity, since this can be tricky})
+    \item A representation of an algebra $A$ is a $\C$-algebra homomorphism $A\to\End(V)$ for some vector space $V$ (sending $1$ to the identity matrix). Determine the one-dimensional representations of $\mathcal{H}$.
+\end{enumerate}
+
+
+\item[6.] The \emph{Durfee square} of a partition $\lambda$ is the largest square that fits inside its diagram (i.e. $\lambda$ has a Durfee square of side length $\ge s$ if and only if $\lambda_s\ge s$). Prove that if $\lambda$ has a Durfee square of size $s$ and $\ell(\mu)<s$, then $\chi^\lambda(w_\mu)=0$.
+
+\end{enumerate}
+
+\end{document}

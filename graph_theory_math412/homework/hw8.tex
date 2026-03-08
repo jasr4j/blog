@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage, amsmath, amssymb, amsthm, amscd, setspace, bm, graphicx, indentfirst, multirow, tikz, enumerate}
+\usepackage{adjustbox,amsfonts,array,graphicx,booktabs,tabularx,multirow,multicol,stmaryrd, tabu}
+\usepackage[utf8]{inputenc}
+\usetikzlibrary{arrows.meta}
+\title{Math 412, Fall 2023 -- Homework 8}
+\date{}
+\setlength{\parskip}{0.5cm}
+\setlength{\parindent}{0cm}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\ba}{\overline}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\End}{\text{End}}
+\newcommand{\wt}[1]{\text{wt}({#1})}
+\begin{document} \maketitle
+\vspace{-80pt}
+
+\textbf{Due:} Wednesday, November 8th, at 9:00AM via Gradescope
+
+\textbf{Instructions:} Students taking the course for three credit hours (undergraduates, most graduate
+students) should choose four of the following five problems to solve and turn in--if you do all five, only the first four will be graded. Graduate students
+taking the course for four credits should solve all five. Problems that use the word ``describe”,
+``determine”, ``show", or ``prove" require proof for all claims.
+
+\begin{enumerate}
+
+\item[1.] Let $G$ be a $2$-connected simple graph.
+
+\begin{enumerate}
+\item[(a)] Prove that in every ear decomposition of $G$, the number of ears (including the initial cycle) is $|E(G)|-|V(G)|+1$.
+    
+\item[(b)] Let $s,t\in V(G)$. Prove that the vertices of $G$ can be linearly ordered so that each vertex other than $s$ and $t$ has a neighbor that is earlier in the order and a neighbor that is later in the order.
+ 
+\end{enumerate}
+
+\item[2.] Let $G$ be a connected graph with at least 3 vertices. Prove that the following are equivalent:
+
+\begin{enumerate}
+    \item[(A)] $G$ is 2-edge connected
+    \item[(B)] Every edge of $G$ appears in a cycle
+    \item[(C)] Every pair of edges of $G$ lie on a closed trail
+    \item[(D)] Every pair of vertices of $G$ lie on a closed trail
+\end{enumerate}
+
+\item[3.] Use (an analogue of) Menger's Theorem [see end of Lecture 28 notes] to prove that $\kappa(G)=\kappa'(G)$ when $G$ is 3-regular (Theorem~4.1.11).
+
+\item[4.] Find a minimum capacity source-to-sink edge cut in the following network (make sure to also prove it is indeed of minimum capacity):
+\begin{center}
+	\includegraphics[scale=1]{graphics/flownetworkhw.png}
+\end{center}
+
+\item[5.] Let $B$ be an $X,Y$-bigraph that satisfies Hall's condition for $X$ (i.e. $|N(S)|\geq S$ for all $S\subseteq X$). WITHOUT USING HALL'S THEOREM, and instead using network flow, prove that there is a matching that saturates $X$.
+
+\emph{[Hint: Create a digraph with consists of an orientation of $B$, along with a source and sink. Choose capacities so that a minimum cut won't contain any edges of $B$, and use the max-flow, min-cut theorem.]}
+
+\end{enumerate}
+
+
+
+
+\end{document}

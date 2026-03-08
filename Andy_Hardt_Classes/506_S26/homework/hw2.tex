@@ -1,0 +1,130 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage, amsmath, amssymb, amsthm, amscd, setspace, bm, graphicx, indentfirst, multirow, tikz, enumerate, verbatim, appendix}
+\usepackage{adjustbox,amsfonts,array,graphicx,booktabs,tabularx,multirow,multicol,stmaryrd, tabu}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{hyperref}
+\usetikzlibrary{arrows.meta}
+\title{Math 506, Spring 2026 -- Homework 2}
+\date{}
+\setlength{\parskip}{0.5cm}
+\setlength{\parindent}{0cm}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\t}[1]{\text{#1}}
+\newcommand{\ba}{\overline}
+\newcommand{\Tr}{\text{Tr}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\End}{\text{End}}
+\newcommand{\Aut}{\text{Aut}}
+\newcommand{\Mat}{\text{Mat}}
+\newcommand{\Sym}{\text{Sym}}
+\newcommand{\Res}{\text{Res}}
+\newcommand{\Ind}{\text{Ind}}
+\newcommand{\ind}{\text{ind}}
+\newcommand{\wt}{\text{wt}}
+
+\makeatletter
+\newcommand{\Wedge}{\@ifnextchar^\@Wedge{\@Wedge^{\,}}}
+\def\@Wedge^#1{\mathop{\bigwedge\nolimits^{\!#1}}}
+\makeatother
+
+\begin{document} \maketitle
+\vspace{-80pt}
+
+\textbf{Due:} Wednesday, February 25th, at 9:00am via Gradescope.
+
+\textbf{Instructions:} Students should complete and submit all problems. All assertions require proof unless otherwise stated. Typesetting your homework using LaTeX is recommended.
+
+For this homework, unless otherwise stated all groups are finite and all representations are finite dimensional and complex.
+
+\begin{enumerate}
+
+\item[1.] Let $V$ and $W$ be $G$-representations, with $W$ irreducible. Prove that the following map $V\to V$ is a $G$-equivariant projection onto the $W$-isotypic component of $V$:
+\[
+\pi_W := \frac{\dim W}{|G|}\sum_{g\in G}\ba{\chi_W(g)}\cdot g.
+\]
+(\emph{In the case where $W$ is the trivial representation, this is Proposition 9}.)
+
+\item[2.] Prove the last statement in Corollary 16. That is, given that the irreducible characters form an orthonormal basis of $\C_{cl}(G)$ with respect to the Hermitian inner product $(\cdot,\cdot)$, show that
+\[
+\sum_{\chi: \text{irred}} \ba{\chi(g)}\chi(h) = \begin{cases} 
+|C(g)|, & \text{if } g\sim h,\\
+0, & \text{otherwise},
+\end{cases}
+\]
+where $C(g)$ is the centralizer of $g$ in $G$.
+
+(\emph{Hint: use properties of unitary matrices}.)
+
+
+
+\item[3.] Let $G$ and $H$ be finite groups. If $V$ is an irreducible representation of $G$ and $W$ is an irreducible representation of $H$, show that $V\otimes W$ is an irreducible representation of $G\times H$ (i.e. define an action of $G\times H$ on $V\otimes W$ and show that the resulting representation is irreducible). (This is called the \emph{external tensor product}; don't confuse it with the \emph{internal tensor product} we've already looked it.) Show that every irreducible representation of $G\times H$ is of this form. 
+
+(\emph{Hint: use character theory}.)
+
+
+\item[4.] Prove \emph{directly} that the induced representation given in Definition 17b is unique up to isomorphism. That is, fix two sets of coset representatives $\sigma_1,\ldots,\sigma_k$ and $\sigma_1',\ldots,\sigma_k'$ for $G/H$ with $\sigma_i^{-1}\sigma_i'\in H$. Let
+\[
+V = \bigoplus_{i=1}^k W_i, \qquad W_i = \{w_i|w\in W\},\qquad \text{with action } g\cdot w_i := (h\cdot w)_j, \text{ where } g\sigma_i = \sigma_j h,
+\]
+\[
+V' = \bigoplus_{i=1}^k W_i, \qquad W_i' = \{w_i'|w\in W\},\qquad \text{with action } g\cdot w_i' := (h'\cdot w)_j, \text{ where } g\sigma_i' = \sigma_j' h'.
+\]
+
+Give an explicit $G$-isomorphism $V\to V'$.
+
+
+\item[5.] There is another definition of induced representation that is more natural in some settings. Fix an $H$-representation $(\rho,W)$. Let $\Ind_H^G\rho$ refer to the definition from class of the induced representation, corresponding to a fixed set $\sigma_1,\ldots,\sigma_k$ of (left) coset representatives for $G/H$. Let
+\[
+\ind_H^G \rho = \left\{ f:G\to W | f(hg) = \rho(h) f(g) \text{ for all } h\in H, g\in G\right\},
+\]
+with $G$-action given by
+\[
+g\cdot f(g') := f(g'g).
+\]
+
+\begin{enumerate}
+    \item Prove that $\ind_H^G\rho$ is a $G$-representation. Specifically, prove that $g\cdot f(g') := f(g'g)$ is a $G$-action on the space of functions $G\to W$, and that if $f\in\ind_H^G\rho$, then so is $g\cdot f$.
+    \item Prove that $\Ind_H^G\rho\cong \ind_H^G\rho$ by showing that
+    \[
+    w_i\mapsto f_{w,i}, \qquad \text{where} \qquad \underset{(h\in H)}{f_{w,i}(h\sigma_j^{-1})} = \begin{cases} h\cdot w, & \text{if } i=j, \\ 0, & \text{otherwise}.\end{cases}
+    \]
+    is a $G$-isomorphism.
+\end{enumerate}
+
+\item[6.] A \emph{virtual representation} over $\C$ of a finite group $G$ is a formal integer linear combination of irreducible $G$-representations (if all coefficients are nonnegative, this is an honest $G$-representation). Likewise, a \emph{virtual character} is an element of $\C_{\t{cl}}(G)$ with integer coefficients in the basis of irreducible characters.
+
+\begin{enumerate}
+    \item If $\chi$ is a virtual character and $(\chi,\chi)=1$, prove that (exactly) one of $\pm\chi$ is an irreducible character.
+    \item In the language of Lecture 9, fix a one-dimensional representation $\nu:L^\times\to\C$, let $\alpha = \nu|_{K^\times}$, and let $\rho_\nu$ be the virtual representation
+    \[
+    \rho_\nu := 
+    \widetilde{\rho}_1\otimes\rho_{\alpha_1} -  \rho_{\alpha_1} - \Ind_{L^\times}^G \nu.
+    \]
+    Compute the virtual character of $\rho_\nu$, and prove that it is irreducible.
+\end{enumerate}
+
+\item[7.] Again use the setting of Lecture 9, and recall the Weil group $W := L^\times \rtimes \langle\sigma\rangle$, where $\sigma^2=1$ and $\sigma\ell = \ba{\ell}\sigma$ ($\sigma$ can be thought of as the nontrivial automorphism of $L$ fixing $K$).
+
+Let $\tau$ be a two-dimensional representation of $W$, and write $\tau|_{L^\times} = \nu_1\oplus\nu_2$.
+\begin{enumerate}
+    \item If $\tau$ is irreducible, show that $\ba{\nu_1} = \nu_2$, and both $\nu_1$ and $\nu_2$ do not factor through the norm map $N_{L/K}$.
+    \item If $\tau$ is reducible, show that $\nu_1$ and $\nu_2$ factor through $N_{L/K}$.
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+
+        Design by TEMPLATED
+        http://templated.co
+        Released for free under the Creative Commons Attribution License
+
+        Name       : Coffeelike
+        Version    : 1.0
+        Released   : 20130222
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta http-equiv="content-type" />
+                <title>Andy Hardt</title>
+        <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
+        <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+                <div id="bg">
+                        <div id="outer">
+                                <div id="header">
+                                        <div id="logo">
+                                                <h1>
+                                                        <a href="snt19-20.html">SNT 2019-2020</a>
+                                                </h1>
+                                        </div>
+                                        <div id="nav">
+                                                <ul>
+                                                        <li class="first active">
+                                                                <a href="snt19-20.html">Home</a>
+                                                        </li>
+                                                </ul>
+                                                <br class="clear" />
+                                        </div>
+                                </div>
+                                <div id="main">
+                                        <div id="sidebar">
+						<img src="images/first_seminar.jpg" width="200" alt="" />
+                                                <h3>
+                                                        Links
+                                                </h3>
+                                                <ul class="linkedList">
+                                                        <li class="first">
+                                                                <a href="https://math.umn.edu/">UMN Math Department</a>
+                                                        </li>
+                                                        <li>
+                                                                <a href="https://www.ams.org/home/page">AMS Homepage</a>
+                                                        </li>
+                                                        <li>
+                                                                <a href="https://mathscinet.ams.org/mathscinet">MathSciNet</a>
+                                                        </li>
+                                                        <li>
+                                                                <a href="https://arxiv.org/archive/math">Arxiv</a>
+                                                        </li>
+                                                        <li class="last">
+                                                                <a href="https://twin-cities.umn.edu/">University of Minnesota</a>
+                                                        </li>
+                                                </ul>
+                                        </div>
+                                        <div id="content">
+                                                <div id="box1">
+							<h2>
+                                                                Student Number Theory Seminar 2019-20
+                                                        </h2>
+							<p>
+							Welcome the the homepage for the Student Number Theory Seminar at the University of Minnesota.
+							<p>
+							Meeting time: Mondays 3:35-4:25<br>Location: Vincent Hall 1<br>Organizers: Joe Dickinson and Andy Hardt
+							</p>
+							<h3>
+								Fall 2019
+							</h3>
+							<ul>
+								<li><b>9/9/19</b>: Andy Hardt -- <i>What is Number Theory?</i><br><a href="abs9-9.html">Abstract</a><br><a href="notes9-9.pdf">Notes</a></li>
+								<li><b>9/16/19</b>: Joe Dickinson -- <i>TBD</i><br><a href="#">Abstract</a><br><a href="#">Notes</a></li>
+								<li><b>9/23/19</b>: Claire Frechette -- <i>TBD</i></li>
+								<li><b>9/30/19</b>: Dev Hegde -- <i>TBD</i></li>
+								<li><b>10/7/19</b>: Katy Weber -- <i>TBD</i></li>
+								<li><b>10/14/19</b>: David DeMark -- <i>TBD</i></li>
+								<li><b>10/21/19</b>: TBD</li>
+								<li><b>10/28/19</b>: TBD</li>
+								<li><b>11/4/19</b>: TBD</li>
+								<li><b>11/11/19</b>: TBD</li>
+								<li><b>11/18/19</b>: Emily Tibor -- <i>TBD</i></li>
+								<li><b>11/25/19</b>: TBD</li>
+								<li><b>12/2/19</b>: TBD</li>
+								<li><b>12/9/19</b>: TBD</li>
+								<li><b>12/16/19</b>: TBD</li>
+							</ul>
+                                                </div>
+                                                <br class="clear" />
+                                        </div>
+                                        <br class="clear" />
+                                </div>
+                        </div>
+                        <div id="copyright">
+                                &copy; Andrew Hardt | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a> | <a href="https://pixabay.com/photos/milky-way-starry-sky-night-sky-star-2971669/">Background Image</a>
+                        </div>
+                </div>
+    </body>
+</html>

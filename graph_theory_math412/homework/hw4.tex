@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage, amsmath, amssymb, amsthm, amscd, setspace, bm, graphicx, indentfirst, multirow, tikz, enumerate}
+\usepackage{adjustbox,amsfonts,array,graphicx,booktabs,tabularx,multirow,multicol,stmaryrd, tabu}
+\usepackage[utf8]{inputenc}
+\usetikzlibrary{arrows.meta}
+\title{Math 412, Fall 2023 -- Homework 4}
+\date{}
+\setlength{\parskip}{0.5cm}
+\setlength{\parindent}{0cm}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\ba}{\overline}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\End}{\text{End}}
+\begin{document} \maketitle
+\vspace{-80pt}
+
+\textbf{Due:} Wednesday, September 27th, at 9:00AM via Gradescope
+
+\textbf{Instructions:} Students taking the course for three credit hours (undergraduates, most graduate
+students) should choose four of the following five problems to solve and turn in--if you do all five, only the first four will be graded. Graduate students
+taking the course for four credits should solve all five. Problems that use the word ``describe”,
+``determine”, ``show", or ``prove" require proof for all claims.
+
+\begin{enumerate}
+
+\item[1.] Let $G$ be a digraph with vertices $x$ and $y$ such that $d^+(x)-d^-(x)=d^-(y)-d^+(y)=4$, and for all other vertices $v$, $d^+(v)=d^-(v)$. Prove that there exist paths $P_1,P_2,P_3,P_4$ from $x$ to $y$ in $G$, such that none of these paths share  an edge.
+
+\item[2.]  Let T be a tournament having no vertex with indegree $0$. Prove that $T$ has at least three kings. \emph{[Hint: Prove that if $x$ is a king in $T$, then $T$ has another king in $N^-(x)$, the in-neighborhood of $x$.]}
+
+\item[3.] Prove that for each simple graph $G$  the following are equivalent.
+
+\begin{enumerate}
+\item $G$ is a forest (i.e. a simple graph with no cycles).
+\item Every induced subgraph of $G$ has a vertex of degree at most $1$.
+\item The intersection of any two intersecting paths in $G$ is either empty or a path. 
+\item The number of connected components of $G$ is the number of vertices minus the number of edges.
+\end{enumerate}
+
+
+\item[4.] For $n\geq 3$, prove that if an $n$-vertex graph $G$ has  three vertices $v_1,v_2,v_3$ such that the subgraphs $G\setminus v_1,G\setminus v_2$ and  $G\setminus v_3$ are acyclic, then $G$ has at most one cycle.
+
+\item[5.] Let $T$ be a tree, and let $B\subseteq V(T)$ be the set of vertices of $T$ with degree at least 3. Prove that the number of leaves $\ell$ of $T$ equals \[2 + \sum_{v\in B} (d(v)-2).\]
+
+\end{enumerate}
+
+
+
+
+\end{document}

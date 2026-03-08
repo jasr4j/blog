@@ -1,0 +1,247 @@
+\documentclass{article}
+%%%%%%%%%%%%%
+% Loads packages
+%%%%%%%%%%%%%
+\usepackage[table]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{geometry} %package needed to set margins
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mdframed}
+\usepackage{tikz}
+\usepackage{amsfonts}
+
+\pagestyle{fancy}
+\fancyhf{}
+\chead{\textbf{Homework 1}}
+\lhead{Math 213-A1, Spring 2026}
+\rhead{Due Friday, 1/30 at 9:00am}
+
+%%%%%%%%%%%%%
+% Sets margins
+%%%%%%%%%%%%%
+\newgeometry{left=1.5in,right=1in,top=1in,bottom=1in}
+\setlength\headsep{3pt}
+
+%%%%%%%%%%%%%
+% Creates problem and solution environments
+%%%%%%%%%%%%%
+
+% Solution Environment
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+% Problem Environment
+\newenvironment{problem}[1]
+    {\begin{mdframed}[default]
+    \textbf{Problem #1:}
+    }
+    {\end{mdframed}
+    }
+    
+%%%%%%%%%%%
+% Custom Commands
+%%%%%%%%%%%
+\newcommand{\gOne}{\cellcolor{green!50!white} 1}
+\newcommand{\rZero}{\cellcolor{red!50!white} 0}
+
+\begin{document}
+
+\begin{problem}{\S 1.1: 8(a,d,f,h)}
+Let $p$ and $q$ be the propositions
+\begin{align*}
+&\text{$p$: I bought a lottery ticket this week.}\\
+&\text{$q$: I won the million dollar jackpot.}
+\end{align*}
+Express each of these propositions as an English sentence.
+\begin{enumerate}
+    \item[(a)] $\neg p$
+    \item[(d)] $p\land q$
+    \item[(f)] $(\neg p) \implies (\neg q)$
+    \item[(h)] $(\neg p) \lor (p\land q)$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{\S 1.2: 6}
+Use a truth table to verify the first De Morgan law $\neg (p\land q) \equiv \neg p \lor \neg q$.
+\end{problem}
+
+\begin{problem}{\S 1.4: 14(a,d)}
+Express each of these quantifications in English, if the domain consists of all real numbers. Then, determine the truth value of the statement
+\begin{enumerate}
+    \item[(a)] $\exists x(x^3=-1)$
+    \item[(d)] $\forall x(2x>x)$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{\S 2.1: 10(a,c,e,g)}
+Determine whether the following statements are true or false.
+\begin{enumerate}
+    \item[(a)] $\emptyset \in \{ \emptyset \}$
+    \item[(c)] $\{ \emptyset \} \in \{ \emptyset \}$
+    \item[(e)] $\{ \emptyset \} \subset \{ \emptyset, \{ \emptyset \} \}$
+    \item[(g)] $\{ \{ \emptyset \} \} \subset \{ \{ \emptyset \}, \{ \emptyset \} \}$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{\S 2.1: 16}
+Use a Venn diagram to illustrate the relationships $A \subset B$ and $A \subset C$.
+\end{problem}
+
+\begin{problem}{\S 2.1: 20}
+What is the cardinality of each of the following sets?
+\begin{enumerate}
+    \item[(a)] $\emptyset$
+    \item[(b)] $\{ \emptyset \}$
+    \item[(c)] $\{ \emptyset, \{ \emptyset \} \}$
+    \item[(d)] $\{ \emptyset, \{ \emptyset \}, \{ \emptyset, \{ \emptyset \} \} \}$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{\S 2.1: 26}
+Show that if $A \subseteq C$ and $B \subseteq D$, then $A \times B \subseteq C \times D.$
+\end{problem}
+
+\begin{problem}{\S 2.1: 32(a,c)}
+Let $A = \{ a, b, c \}$, $B = \{ x, y \}$, and $C = \{ 0, 1 \}$. Find the following Cartesian products.
+\begin{enumerate}
+    \item[(a)] $A \times B \times C$ \item[(c)] $C \times A \times B$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{\S 2.2: 4}
+Let $A = \{ a, b, c, d, e \}$ and $B = \{ a, b, c, d, e, f, g, h \}$. Find:
+\begin{enumerate}
+    \item[(a)] $A \cup B$.
+    \item[(b)] $A \cap B$.
+    \item[(c)] $A - B$.
+    \item[(d)] $B - A$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{\S 2.2: 14}
+Find the sets $A$ and $B$ if $A - B = \{ 1, 5, 7, 8 \}$, $B-A = \{ 2, 10 \}$, and $A \cap B = \{ 3, 6, 9 \}$.
+\end{problem}
+
+\begin{problem}{\S 2.2: 15}
+Prove the second De Morgan law in Table 1 by showing that if $A$ and $B$ are sets, then $\overline{A \cup B} = \overline{A} \cap \overline{B}$ (a) showing each side is a subset of the other side and (b) by using a membership table.
+\end{problem}
+
+\begin{problem}{\S 2.2: 24}
+Let $A, B,$ and $C$ be sets. Show that $(A-B)-C = (A-C)-(B-C)$.
+\end{problem}
+
+\begin{problem}{\S 2.2: 26}
+Draw the Venn diagrams for each of the following combinations of the sets $A,B,$ and $C$.
+\begin{enumerate}
+    \item[(a)] $A \cap (B \cup C)$
+    \item[(b)] $\overline{A} \cap \overline{B} \cap \overline{C}$
+    \item[(c)] $(A-B) \cup (A-C) \cup (B-C)$
+\end{enumerate}
+\end{problem}
+
+\bigskip
+
+\textbf{Note:} here is sample LaTeX code for drawing truth tables and Venn diagrams. It is also acceptable to hand-draw figures like these and attach them at the end of your submission (although please make sure to tag them correctly).
+
+\bigskip
+
+Sample truth table:
+
+\begin{center}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|c|} \hline
+         $p$ & $q$ & $p\lor q$ \\ \hline \hline
+         T & T & T \\ \hline
+         T & F & T \\ \hline
+         F & T & T \\ \hline
+         F & F & F \\ \hline
+    \end{tabular}
+    \end{center}
+
+\newpage
+
+Sample Venn diagrams:
+
+\begin{center}
+    \begin{tikzpicture}
+        \def \Acircle{(2, 3.25) circle (1.5)}
+        \def \Bcircle{(4, 3.25) circle (1.5)}
+        \def \Ccircle{(3,1.75) circle (1.5)}
+    
+        \draw (0,0) to (6,0) to (6,5) to (0,5) to (0,0);
+        
+        \begin{scope}
+        \clip \Acircle;
+        \fill[blue!10!white] \Bcircle;
+        \end{scope}
+        \begin{scope}
+        \clip \Bcircle;
+        \fill[blue!10!white] \Ccircle;
+        \end{scope}
+        
+        \draw \Acircle;
+        \draw \Bcircle;
+        \draw \Ccircle;
+        
+        \node at (1,3.25) {\Large $A$};
+        \node at (5,3.25) {\Large $B$};
+        \node at (3,0.75) {\Large $C$};
+    \end{tikzpicture}
+\end{center}
+
+\begin{center}
+    \begin{tikzpicture}
+        \def \Acircle{(2, 3.25) circle (1.5)}
+        \def \Bcircle{(4, 3.25) circle (1.5)}
+        \def \Ccircle{(3,1.75) circle (1.5)}
+        
+        \draw (0,0) to (6,0) to (6,5) to (0,5) to (0,0);
+
+        \begin{scope}
+        \clip \Acircle;
+        \fill[blue!10!white] \Bcircle;
+        \end{scope}
+
+        \begin{scope}
+        \clip \Bcircle;
+        \fill[blue!10!white] \Ccircle;
+        \end{scope}
+
+        \begin{scope}
+        \clip \Ccircle;
+        \fill[blue!10!white] \Acircle;
+        \end{scope}
+        
+        \begin{scope}
+        \clip \Acircle;
+        \clip \Bcircle;
+        \fill[white] \Ccircle;
+        \end{scope}
+        
+        \draw \Acircle;
+        \draw \Bcircle;
+        \draw \Ccircle;
+        
+        \node at (1,3.25) {\Large $A$};
+        \node at (5,3.25) {\Large $B$};
+        \node at (3,0.75) {\Large $C$};
+    \end{tikzpicture}
+\end{center}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (0,0) to (8,0) to (8,5) to (0,5) to (0,0);
+        \draw[fill=red, fill opacity=0.075] (4,2.5) circle (2.25);
+        \draw[fill=blue, fill opacity=0.1] (4,2.5) circle (1.5);
+        \draw[fill=green, fill opacity=0.5] (4,2.5) circle (0.5);
+        
+        \node at (4,2.5) {\Large $A$};
+        \node at (4.9,2.5) {\Large $B$};
+        \node at (5.9,2.5) {\Large $C$};
+    \end{tikzpicture}
+\end{center}
+
+\end{document}
