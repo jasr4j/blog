@@ -1,0 +1,118 @@
+\documentclass{beamer}
+\usetheme{Boadilla}
+\newcommand{\ba}{\overline}
+\definecolor{resulthead}{RGB}{205,205,235}
+\definecolor{termshead}{RGB}{242,218,195}
+\begin{document}
+
+\title[Math and Proofs]{Math and Proofs Class 3}
+\date{September 26th, 2017}
+
+\begin{frame}[plain]
+\titlepage
+\end{frame}
+
+\begin{frame}{Fun aside: Euclid's Proof that there are infinitely many prime numbers}
+\begin{itemize}
+\item A prime number is a number with only two factors: 1 and itself
+\item Every number is made up of prime numbers multiplied together
+\item So maybe there are finitely many of them? We can multiply them together in so many different ways. Maybe we can create all the numbers in that way?
+\item Nope! Multiply them all together and add 1. What does this do?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Recap of Last Class}
+\begin{itemize}
+\item We started to learn about set theory
+\item We looked at some set theory operations and did some simple proofs
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Set Theory Reminders}
+\begin{itemize}
+\item Empty Set: $\emptyset$
+\item Union: $A\cup B$
+\item Intersection: $A\cap B$
+\item Set minus: $A\setminus B$ (the elements in $A$ but not $B$)
+\item Subset: $A\subseteq B$
+\item Element: $x\in A$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Set Theory Results}
+\begin{enumerate}
+\item For any set $A$, $\emptyset \subseteq A$
+\item For any set $A$, $A\subseteq A$
+\item If $A$, $B$, and $C$ are sets where $A\subset B$ and $B\subset C$, then $A\subset C$
+\item Let $A$ and $B$ be sets. Then $A=B$ if and only if $A\subset B$ and $B\subset A$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Exercise 1}
+Let $A = \{x,y,\{x,y\}\}$. True or false:
+\begin{enumerate}
+\item $\{x,y\}\subseteq A$
+\item $\{x,y\}\in A$
+\item $\{y\}\subseteq A$
+\item $\{y\}\in A$
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Exercise 2}
+Let $A = \{1,2,3\}, B = \{2,3,4\}, C = \{4,5,6\}$. Find each of the following sets:
+\begin{enumerate}
+\item $A\cup B$
+\item $A\cap B$
+\item $B\cap C$
+\item $A\setminus B$
+\item $A\cap (B\cup C)$
+\item $(A\cap B)\cup (A\cap C)$
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{More Set Theory Results}
+Let $A,B,C$ be sets
+\begin{enumerate}
+\item $A\cap (B\cup C) = (A\cap B)\cup (A\cap C)$
+\item $A\cup (B\cap C) = (A\cup B)\cap (A\cap C)$ (exercise)
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Cartesian Product}
+The Cartesian Product of two sets $A$ and $B$ is the set of ordered pairs with first entry in $A$ and second entry in $B$.
+\\\vspace{10pt}
+Example: $A = \{1,2\}, B = \{dog, cat, child\}$. Then $A\times B = \{(1,dog), (1,cat), (1,child), (2,dog), (2,cat), (2,child)\}$.
+\\\vspace{10pt}
+Questions:
+\begin{enumerate}
+\item If $A = \{a,b\}, B = \{34\}$, what are $A\times B$ and $B\times A$?
+\item If $A$ has 4 elements and $B$ has 3 elements, how many elements does $A\times B$ have?
+\item If $\mathbb{R}$ is the set of ``real'' numbers, you could say that $\mathbb{R}$ represents the number line. In this way of thinking, what is $\mathbb{R}\times\mathbb{R}$? 
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Power Sets}
+If $A$ is a set, then the power set $P(A)$ is the set of all subsets of $A$.
+\\\vspace{10pt}
+Example: $A = \{a,b,c\}$. $P(A) = \{\emptyset, \{a\}, \{b\}, \{c\}, \{a,b\}, \{a,c\}, \{b,c\}, \{a,b,c\}\}$.
+\\\vspace{10pt}
+Exercises:
+\begin{enumerate}
+\item If $A = \{1,2\}$, what is $P(A)$?
+\item Find the power set of the empty set
+\item Prove:
+\begin{itemize}
+\item If $A\subset B$, then $P(A)\subset P(B)$
+\item If $A\cap B = \emptyset$, then $P(A)\cap P(B) = \emptyset$
+\end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Next Time}
+\begin{itemize}
+\item We'll look at functions, bijections, and equivalence relations
+\item In two weeks, we'll start looking at cardinality and infinity
+\end{itemize}
+\end{frame}
+
+\end{document}
