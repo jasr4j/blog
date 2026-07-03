@@ -1,5 +1,11 @@
-# blog
+# My Blog
 
-Topics: Things I'm interested in
+This blog is about some interests and is updated to have a much better UI with standard and dracula themes. 
 
-I will keep the HTML simple to make sure everything is clean and can work on hopefully any device. 
+To run this website locally, run the following in your terminal: 
+
+```bash
+$ git clone https://github.com/jasr4j/blog.git
+$ cd blog
+$ npx http-server
+```

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetCode 494: My Approach</title>
+    <script>
+        (function() {
+            // 1. Get the stored theme or default to light
+            const savedTheme = localStorage.getItem('selected-theme');
+            
+            // 2. Check if a theme was saved
+            if (savedTheme) {
+            document.documentElement.classList.add(`theme-${savedTheme}`);
+            } else {
+            // Fallback for first-time visitors (matching system preference)
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.classList.add(`theme-dracula-${systemTheme}`);
+            }
+        })();
+    </script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">Jasraj Bhatia</div>
+            
+            <button class="menu-toggle" onclick="toggleMenu()">Menu &#9776;</button>
+            
+            <nav id="site-nav" class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="https://jasr4j.github.io">Home</a></li>
+                    <li><a href="https://jasr4j.github.io/blog/">Blog</a></li>
+                    <li><a href="https://github.com/jasr4j">GitHub</a></li>
+                    <li>
+                        <div class="theme-wrapper">
+                            <span>Theme:</span>
+                            <select id="theme-selector" onchange="changeTheme(this.value)">
+                                <option value="light">Light</option>
+                                <option value="dark">Dark</option>
+                                <option value="dracula-light">Dracula (Light)</option>
+                                <option value="dracula-dark">Dracula (Dark)</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <div class="content">
+            <h2>LeetCode 494: My Approach</h2>
+            <h3>March 26, 2026</h3>
+            
+            <p>I did my first LeetCode contest a little while ago (weekly 494). In this contest, I solved 3/4 problems and got my initial rating as 1578. </p>
+            <p>For the 1st problem: You can use induction to prove that any case would return True as an O(1) solution</p>
+            <p><a href="https://leetcode.com/problems/construct-uniform-parity-array-ii/submissions/1955246683">https://leetcode.com/problems/construct-uniform-parity-array-ii/submissions/1955246683</a> was my solution to the second problem. My approach was to use the parity of the first number of sorted nums1 and finding every number and if there's an odd or even so far for an O(n) solution. This allows for the use of if statements that will either return true or false and a base case of true</p>
+            <p>Finally, <a href="https://leetcode.com/problems/minimum-removals-to-achieve-target-xor/submissions/1955366295">https://leetcode.com/problems/minimum-removals-to-achieve-target-xor/submissions/1955366295</a> was my 3rd submission, which I used bit manipulation and dp to find a suboptimal, yet still fast solution that passed in contest. </p>
+            <p>Thank you for reading!</p>
+        </div>
+    </main>
+</body>
+</html>

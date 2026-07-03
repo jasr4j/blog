@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <script>
+        (function() {
+            // 1. Get the stored theme or default to light
+            const savedTheme = localStorage.getItem('selected-theme');
+            
+            // 2. Check if a theme was saved
+            if (savedTheme) {
+            document.documentElement.classList.add(`theme-${savedTheme}`);
+            } else {
+            // Fallback for first-time visitors (matching system preference)
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.classList.add(`theme-dracula-${systemTheme}`);
+            }
+        })();
+    </script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">Jasraj Bhatia</div>
+            
+            <button class="menu-toggle" onclick="toggleMenu()">Menu &#9776;</button>
+            
+            <nav id="site-nav" class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="https://jasr4j.github.io">Home</a></li>
+                    <li><a href="https://jasr4j.github.io/blog/">Blog</a></li>
+                    <li><a href="https://github.com/jasr4j">GitHub</a></li>
+                    <li>
+                        <div class="theme-wrapper">
+                            <span>Theme:</span>
+                            <select id="theme-selector" onchange="changeTheme(this.value)">
+                                <option value="light">Light</option>
+                                <option value="dark">Dark</option>
+                                <option value="dracula-light">Dracula (Light)</option>
+                                <option value="dracula-dark">Dracula (Dark)</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <div class="welcome">
+            <h2>Welcome to my blog!</h2>
+            <p>This is the place where I will write about things I'm interested in, but mostly just some projects and competitive programming.</p>
+            <p>Here are some discrete math courses that I'm keeping open for anyone to use for free. </p>
+            <p><a href="resources/graph_theory_math412/course_page.html">Math 412 Course</a></p>
+            <p><a href="resources/mcs.pdf">Math for CS Book (PDF)</a></p>
+        </div>       
+        <div class="posts">
+            <h2>POSTS:</h2>
+            <div id="posts-container"></div>
+           <!-- <p><a href="posts/leetcode494.html">LeetCode Weekly 494: My approach</a></p>-->
+        </div>
+    </main>
+</body>
+</html>

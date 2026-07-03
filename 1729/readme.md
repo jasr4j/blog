@@ -1,1 +1,0 @@
-where my blog pages' src is located
