@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Novel Problem with AI</title>
+    <script>
+        (function() {
+            // 1. Get the stored theme or default to light
+            const savedTheme = localStorage.getItem('selected-theme');
+            
+            // 2. Check if a theme was saved
+            if (savedTheme) {
+            document.documentElement.classList.add(`theme-${savedTheme}`);
+            } else {
+            // Fallback for first-time visitors (matching system preference)
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.classList.add(`theme-dracula-${systemTheme}`);
+            }
+        })();
+    </script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">Jasraj Bhatia</div>
+            
+            <button class="menu-toggle" onclick="toggleMenu()">Menu &#9776;</button>
+            
+            <nav id="site-nav" class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="https://jasr4j.github.io">Home</a></li>
+                    <li><a href="https://jasr4j.github.io/blog/">Blog</a></li>
+                    <li><a href="https://github.com/jasr4j">GitHub</a></li>
+                    <li>
+                        <div class="theme-wrapper">
+                            <span>Theme:</span>
+                            <select id="theme-selector" onchange="changeTheme(this.value)">
+                                <option value="light">Light</option>
+                                <option value="dark">Dark</option>
+                                <option value="dracula-light">Dracula (Light)</option>
+                                <option value="dracula-dark">Dracula (Dark)</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <div class="content">
+            <h2>A Novel Problem: Redeeming the AI-fication of a knowledge based field (Mathematics)</h2>
+            <h3>November 25, 2026</h3>
+            
+            <p>
+                    Disclaimer: I am not the most knowledgable when it comes to AI or math, but I am curious and hope to learn something new
+                from any responses. 
+            </p>
+
+            <p>
+                AI is now a very powerful tool, and its purpose of building mathematical proofs 
+                using existing knowledge, has recently been brought back to the forefront of AI 
+                 frontier labs' innovation. It is possible to solve complex problems with the 
+                 power of AI. But there becomes an issue. Since AI is artificial, as the name implies,
+                 meaning it is trained on existing data, there is a bound to what AI knows. 
+            </p>
+            <p>
+                We need to create a mathematical problem that AI doesn't have the means to solve. 
+                Math as a field is being redefined everyday and the way to change it for the better isn't simply
+                to explore maths that applies to the real world, but explore maths beyond our understanding of life. 
+                Beyond geometry in dimensions, we could analyze the geometry of gradients that predict a gradient. 
+                This is a simple example that has already been done. In order to pose such a problem, I will also attempt to solve it
+                (possibly more in a future post). 
+            </p>
+            <p>
+                So far, my ideas include graph theory combining with non euclidean computational geometry. In some way, we could use 
+                interesting geometry to build unknown graphs. I am bouncing off older ideas like group theory which existed with no purpose. 
+                Hopefully I can creatively define something that can stump AI and offer opportunity for renewed interests for 
+                humans in mathematical research, with our creative brains that we actually have (not GPUs). 
+            </p>
+            <p>
+                This problem may or may not change maths, but slowly, maths is becoming a subject where creativity 
+                triumphs problem solving and new subfields have the potential to be discovered. This is where AI can use 
+                a small understanding to bridge gaps. In most AI classes, one learns about uncertainty, but also about 
+                knowledge. Creativity is like a seed for a knowledge base, and simply put, using uncertainty, we can predict
+                what the next thing will be based on our expanding knowns and unknowns and how likely something is to occur. 
+            </p>
+            <p>
+                This may also pose issues to AI, where the subfield is so novel that existing neurons 
+                making connections will only hurt the AI's training. This is all hypothetical, but I would be glad to reply to 
+                any emails on the subject. This is not meant to hurt any sentiments, just posing a question about the future of 
+                mathematics and AI.
+            </p>
+            <p>
+                Thank you for reading and good luck if you try to solve! 
+                If you wish to reply, reach out to me using the email on the home page with a human written
+                 (other than touch up or translation) argument or solution. 
+                I would love to discuss solutions and topics with anyone interested, to gain more knowledge about maths and AI. 
+            </p>
+        </div>
+    </main>
+</body>
+</html>
